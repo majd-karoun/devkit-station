@@ -1,0 +1,12 @@
+.links-list-container{
+    background-color:  rgba(255, 255, 255, 0.3); 
+    border-radius: 30px;
+    width: 90%;
+    margin: 0 auto;
+    padding-inline: 30px;
+    padding-block: 40px;
+}
+.links-list{
+    list-style: none;
+    
+}

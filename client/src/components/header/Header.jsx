@@ -26,32 +26,32 @@ const Header = ({ setLinks }) => {
       <h1 className="logo">DevLinks Station</h1>
       <nav className="filter-buttons">
         <button
-          className={filter === "All" ? "active" : "btn"}
+          className={filter === "All" ? "active btn-all" : "btn-all"}
           onClick={handleFilter}>
           All
         </button>
         <button
-          className={filter === "Tools" ? "active" : "btn"}
+          className={filter === "Tools " ? "active btn-tools" : "btn-tools"}
           onClick={handleFilter}>
           Tools
         </button>
         <button
-          className={filter === "Design" ? "active" : "btn"}
+          className={filter === "Design" ? "active btn-design" : "btn-design"}
           onClick={handleFilter}>
           Design
         </button>
         <button
-          className={filter === "Javascript" ? "active" : "btn"}
+          className={filter === "Javascript" ? "active btn-js" : "btn-js"}
           onClick={handleFilter}>
           JavaScript
         </button>
         <button
-          className={filter === "CSS" ? "active" : "btn"}
+          className={filter === "CSS" ? "active" : "btn-css"}
           onClick={handleFilter}>
           CSS
         </button>
         <button
-          className={filter === "HTML" ? "active" : "btn"}
+          className={filter === "HTML" ? "active btn-html" : "btn-html"}
           onClick={handleFilter}>
           HTML
         </button>
