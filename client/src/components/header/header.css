@@ -1,0 +1,16 @@
+.logo{
+    color: white;
+text-align: center;
+
+margin-block: 20px;
+}
+
+.btn{
+    background-color: #000C24;
+    color: white;
+    border: 1px solid rgb(15, 220, 227);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    text-decoration: none;
+}
