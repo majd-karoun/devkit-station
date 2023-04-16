@@ -1,1091 +1,961 @@
 const resources = [
-    {
-      name: "HTML Validator",
-      url: "https://validator.w3.org/",
-      type: "HTML",
-      description: "A free online tool that checks HTML code for errors and conformity to W3C standards."
-    },
-    {
-      name: "CSS Diner",
-      url: "https://flukeout.github.io/",
-      type: "CSS",
-      description: "A fun game that teaches CSS selectors in a visual and interactive way."
-    },
-    {
-      name: "You Might Not Need JavaScript",
-      url: "http://youmightnotneedjs.com/",
-      type: "JavaScript",
-      description: "A collection of examples showing how to accomplish common tasks without using JavaScript, with vanilla HTML and CSS code."
-    },
-    {
-      name: "Screen Sizes",
-      url: "https://screensiz.es/",
-      type: "Tools",
-      description: "A reference website that shows the screen sizes and resolutions of various devices, helpful for designing responsive websites."
-    },
-    {
-      name: "Fontjoy",
-      url: "https://fontjoy.com/",
-      type: "Design",
-      description: "A website that uses AI to generate font combinations, helping designers to find the perfect pair for their projects."
-    },
-    {
-        name: "Accessibility Insights",
-        url: "https://accessibilityinsights.io/en/",
-        type: "Tools",
-        description: "A free and open-source browser extension for web developers to identify and fix accessibility issues on their websites."
-      },
-      {
-        name: "Figma",
-        url: "https://www.figma.com/",
-        type: "Design",
-        description: "A cloud-based design tool that allows teams to collaborate on creating and prototyping user interfaces for websites and apps."
-      },
-      {
-        name: "Can I Use",
-        url: "https://caniuse.com/",
-        type: "Tools",
-        description: "A website that provides up-to-date browser support tables for HTML, CSS, and JavaScript features, helping developers decide what to use and when."
-      },
-      {
-        name: "Masonry",
-        url: "https://masonry.desandro.com/",
-        type: "JavaScript",
-        description: "A JavaScript library for creating responsive, grid-like layouts that adapt to different screen sizes, ideal for image galleries and other visual-heavy content."
-      },
-      {
-        name: "Cubic Bézier Curve Generator",
-        url: "https://cubic-bezier.com/",
-        type: "CSS",
-        description: "A simple tool that helps designers and developers create custom cubic Bézier curves for CSS transitions and animations."
-      },
-      {
-        name: "Blaze CSS",
-        url: "https://blaze-css.com/",
-        type: "CSS",
-        description: "A lightweight and modular CSS framework that focuses on providing a minimal yet powerful set of styles and components."
-      },
-      {
-        name: "StaticGen",
-        url: "https://www.staticgen.com/",
-        type: "Tools",
-        description: "A website that lists and compares different static site generators, allowing developers to choose the best one for their needs and preferences."
-      },
-      {
-        name: "Concurrently",
-        url: "https://www.npmjs.com/package/concurrently",
-        type: "JavaScript",
-        description: "A command-line tool that enables running multiple commands and processes concurrently in a single terminal window, improving workflow and productivity."
-      },
-      {
-        name: "Svgomg",
-        url: "https://jakearchibald.github.io/svgomg/",
-        type: "Design",
-        description: "A web-based tool that optimizes SVG files by reducing their size and complexity, resulting in faster page load times and better performance."
-      },
-      {
-        name: "TinyPNG",
-        url: "https://tinypng.com/",
-        type: "Design",
-        description: "An online image compressor that reduces the size of PNG and JPEG files without compromising their quality, making them easier to load and share."
-      },
-      {
-        name: "Lighthouse",
-        url: "https://developers.google.com/web/tools/lighthouse",
-        type: "Tools",
-        description: "An open-source tool from Google that audits web pages for performance, accessibility, and best practices, and provides actionable insights and recommendations."
-      },
-      {
-        name: "Glide",
-        url: "https://glidejs.com/",
-        type: "JavaScript",
-        description: "A lightweight and flexible JavaScript library for creating responsive and touch-friendly sliders and carousels, ideal for showcasing images and videos."
-      },
-      {
-        name: "Stitches",
-        url: "https://stitches.dev/",
-        type: "CSS",
-        description: "A CSS-in-JS library that allows developers to write modular and composable styles using familiar CSS syntax, while leveraging the benefits of JavaScript."
-      },
-      {
-        name: "SVG Waves",
-        url: "https://getwaves.io/",
-        type: "Design",
-        description: "A generator that creates custom and colorful SVG waves that can be used as backgrounds, headers, and other visual elements on web pages and apps."
-      },
-      {
-        name: "Puppeteer",
-        url: "https://pptr.dev/",
-        type: "Tools",
-        description: "A Node.js library that provides a high-level API for controlling headless Chrome or Chromium browsers, allowing developers to automate tasks and tests on web pages and applications."
-      },
-      {
-        name: "Headless Recorder",
-        url: "https://github.com/checkly/headless-recorder",
-        type: "Tools",
-        description: "A Chrome extension that records user interactions and generates Puppeteer or Playwright scripts, making it easier to create automated tests and scripts."
-      },
-      {
-        name: "Blip",
-        url: "https://github.com/lukeed/blip",
-        type: "JavaScript",
-        description: "A tiny (40B) utility for creating visual loading indicators, such as progress bars and spinners, using pure JavaScript and CSS."
-      },
-      {
-        name: "Avocode",
-        url: "https://avocode.com/",
-        type: "Design",
-        description: "A cloud-based design and collaboration tool that allows designers and developers to inspect, share, and sync design files, and generate code snippets."
-      },
-      {
-        name: "Preact",
-        url: "https://preactjs.com/",
-        type: "JavaScript",
-        description: "A fast and lightweight alternative to React, with a smaller API and faster performance, ideal for building high-performing web interfaces."
-      },
-      {
-        name: "Upptime",
-        url: "https://upptime.js.org/",
-        type: "Tools",
-        description: "A free and open-source uptime monitor and status page generator, built on GitHub Actions and Pages, with support for multiple sites and notifications."
-      },
-      {
-        name: "Chota",
-        url: "https://jenil.github.io/chota/",
-        type: "CSS",
-        description: "A micro (3KB) CSS framework that provides a minimal and responsive set of styles and components, ideal for small-scale and fast-loading web projects."
-      },
-      {
-        name: "Web Performance Recipes",
-        url: "https://calendar.perfplanet.com/2021/performance-recipes-for-the-web-platform/",
-        type: "Tools",
-        description: "A collection of performance recipes and techniques for optimizing web performance, from reducing image sizes and using lazy loading to minimizing JavaScript and leveraging caching."
-      },
-      {
-        name: "Neko",
-        url: "https://github.com/hyper-canvas/neko",
-        type: "JavaScript",
-        description: "A fast and lightweight library for creating interactive and animated particle effects, such as backgrounds and loaders, using pure JavaScript and Canvas."
-      },
-      {
-        name: "Feather",
-        url: "https://feathericons.com/",
-        type: "Design",
-        description: "A collection of open-source and customizable SVG icons, with a minimal and consistent design, and support for multiple frameworks and platforms."
-      },
-      {
-        name: "URL to PDF",
-        url: "https://url-to-pdf-api.com/",
-        type: "Tools",
-        description: "A RESTful API that converts web pages and HTML files to PDF documents, with support for custom page size, orientation, and margins."
-      },
-      {
-        name: "Imgbot",
-        url: "https://imgbot.net/",
-        type: "Tools",
-        description: "A GitHub app that automatically optimizes images in pull requests, using lossless compression and image resizing, to improve performance and reduce file sizes."
-      },
-      {
-        name: "Aero.js",
-        url: "https://github.com/aerojs/aero",
-        type: "JavaScript",
-        description: "A fast and modular web framework for building server-rendered and client-side rendered applications, with support for static site generation and hot module reloading."
-      },
-      {
-        name: "Jotai",
-        url: "https://jotai.surge.sh/",
-        type: "JavaScript",
-        description: "A simple and scalable state management library for React, using atoms and selectors to manage application state in a declarative and composable way."
-      },
-      {
-        name: "CodyHouse",
-        url: "https://codyhouse.co/",
-        type: "Design",
-        description: "A collection of free and premium UI components and design resources, with a focus on modern and innovative design trends and techniques."
-      },
-      {
-        name: "NPX",
-        url: "https://www.npmjs.com/package/npx",
-        type: "Tools",
-        description: "A command-line tool that allows developers to run and install Node.js packages without having to install them globally, saving time and reducing clutter."
-      },
-      {
-        name: "Eva Icons",
-        url: "https://akveo.github.io/eva-icons/",
-        type: "Design",
-        description: "A collection of open-source and customizable SVG icons, with a modern and colorful design, and support for multiple frameworks and platforms."
-      },
-      {
-        name: "Axios",
-        url: "https://axios-http.com/",
-        type: "JavaScript",
-        description: "A popular and easy-to-use JavaScript library for making HTTP requests, with support for all major browsers and Node.js, and a flexible and intuitive API."
-      },
-      {
-        name: "Frontity",
-        url: "https://frontity.org/",
-        type: "JavaScript",
-        description: "A modern and open-source framework for building WordPress websites and blogs with React, with support for server-side rendering, AMP, and PWA features."
-      },
-      {
-        name: "CSS Battle",
-        url: "https://cssbattle.dev/",
-        type: "CSS",
-        description: "A fun and challenging game that tests your CSS skills, by asking you to recreate a given design using only HTML and CSS, within a limited number of characters."
-      },
-      {
-        name: "Lazysizes",
-        url: "https://github.com/aFarkas/lazysizes",
-        type: "JavaScript",
-        description: "A lightweight and powerful library for lazy-loading images and videos, using progressive loading and adaptive quality, to improve performance and reduce data usage."
-      },
-      {
-        name: "Pathpicker",
-        url: "https://github.com/facebook/PathPicker",
-        type: "Tools",
-        description: "A command-line tool that helps developers easily select files and paths from command output, using a visual interface and regex-based filtering."
-      },
-      {
-        name: "Fuse.js",
-        url: "https://fusejs.io/",
-        type: "JavaScript",
-        description: "A lightweight and powerful library for fuzzy-searching collections of data, with support for multiple search options and ranking algorithms."
-      },
-      {
-        name: "Typetura",
-        url: "https://typetura.com/",
-        type: "CSS",
-        description: "A responsive typography tool that automatically adjusts font sizes, line heights, and other properties, based on the available space and the user's viewport."
-      },
-      {
-        name: "Inkdrop",
-        url: "https://www.inkdrop.app/",
-        type: "Tools",
-        description: "A cross-platform note-taking app for developers, with support for Markdown, code highlighting, and integration with popular tools like GitHub and VSCode."
-      },
-      {
-        name: "Huebee",
-        url: "https://huebee.buzz/",
-        type: "JavaScript",
-        description: "A simple and lightweight library for creating color pickers and swatches, with a minimalist and customizable design, and support for touch and keyboard interactions."
-      },
-      {
-        name: "Tweakpane",
-        url: "https://cocopon.github.io/tweakpane/",
-        type: "JavaScript",
-        description: "A compact and customizable library for creating GUIs and control panels, with support for various input types, layout options, and theming."
-      },
-      {
-        name: "Emmet Re:view",
-        url: "https://re-view.emmet.io/",
-        type: "Tools",
-        description: "A browser extension that allows developers to preview their responsive designs across different devices and resolutions, using custom and predefined viewports."
-      },
-      {
-        name: "PaperCSS",
-        url: "https://www.getpapercss.com/",
-        type: "CSS",
-        description: "A minimal and elegant CSS framework that provides a lightweight and versatile set of styles and components, inspired by Google's Material Design."
-      },
-      {
-        name: "Gatsby Theme Catalyst",
-        url: "https://theme-catalyst.netlify.app/",
-        type: "JavaScript",
-        description: "A customizable and feature-rich Gatsby theme for creating modern and fast websites, with support for MDX, themes, plugins, and other advanced features."
-      },
-      {
-        name: "ImageKit",
-        url: "https://imagekit.io/",
-        type: "Tools",
-        description: "A cloud-based image optimization and delivery platform, with support for various formats, transformations, and optimizations, and integration with popular CMS and CDNs."
-      },
-      {
-        name: "Draftail",
-        url: "https://www.draftail.org/",
-        type: "JavaScript",
-        description: "A customizable and extensible rich text editor for the web, with support for various formatting options, images, and embeds, and a minimalist design."
-      },
-      {
-        name: "EasilyDo",
-        url: "https://www.easilydo.com/",
-        type: "Tools",
-        description: "A productivity app for iOS and Android that automates repetitive tasks and saves time, by connecting to various services and platforms, and using AI and machine learning."
-      },
-      {
-        name: "Little Snitch",
-        url: "https://www.obdev.at/products/littlesnitch/index.html",
-        type: "Tools",
-        description: "A network monitoring tool for macOS that allows users to control and block incoming and outgoing network connections, and prevent unauthorized access and data leakage."
-      },
-      {
-        name: "Logrocket",
-        url: "https://logrocket.com/",
-        type: "Tools",
-        description: "A logging and session replay tool for web apps, that captures and replays user sessions, network requests, and console logs, to help developers identify and fix issues."
-      },
-      {
-        name: "Qards",
-        url: "https://qards.io/",
-        type: "JavaScript",
-        description: "A powerful and customizable drag-and-drop page builder for WordPress, with support for various content types, layouts, and styles, and a beginner-friendly interface."
-      },
-      {
-        name: "Snowpack",
-        url: "https://www.snowpack.dev/",
-        type: "JavaScript",
-        description: "A fast and flexible frontend build tool that allows developers to build modern web apps with a smooth development experience and blazing-fast performance."
-      },
-      {
-        name: "WPGraphQL",
-        url: "https://www.wpgraphql.com/",
-        type: "JavaScript",
-        description: "A GraphQL server for WordPress, that allows developers to query WordPress data and content using a powerful and flexible API, and integrate it with modern web technologies and frameworks."
-      },
-      {
-        name: "Smartmockups",
-        url: "https://smartmockups.com/",
-        type: "Design",
-        description: "A web-based tool that allows designers and marketers to create and customize realistic mockups and product presentations, using a library of templates and devices."
-      },
-      {
-        name: "Nativefier",
-        url: "https://github.com/nativefier/nativefier",
-        type: "Tools",
-        description: "A command-line tool that allows developers to turn any web page into a native desktop app, with support for various platforms, icons, and settings."
-      },
-      {
-        name: "Puppeteer Recorder",
-        url: "https://chrome.google.com/webstore/detail/puppeteer-recorder/djeegiggegleadkkbgopoonhjimgehda",
-        type: "Tools",
-        description: "A Chrome extension that allows developers to record their interactions with web pages, and generate Puppeteer scripts, making it easier to automate tests and tasks."
-      },
-      {
-        name: "Bullseye",
-        url: "https://github.com/robb-j/bullseye",
-        type: "JavaScript",
-        description: "A tiny (700B) and efficient library for monitoring element resize events, with support for multiple targets and callbacks, and no dependencies."
-      },
-      {
-        name: "Pinia",
-        url: "https://pinia.esm.dev/",
-        type: "JavaScript",
-        description: "A lightweight and fast state management library for Vue.js, with support for TypeScript, reactivity, and devtools, and a simple and intuitive API."
-      },
-      {
-        name: "Sourceful",
-        url: "https://sourceful.us/",
-        type: "Tools",
-        description: "A code search engine and collaboration platform, that allows developers to search and share code snippets, and discover new solutions and patterns."
-      },
-      {
-        name: "Ultralight",
-        url: "https://ultralight.dev/",
-        type: "JavaScript",
-        description: "A lightweight and fast web rendering engine, with support for modern web technologies, and a flexible and easy-to-use API, ideal for building native-like desktop apps."
-      },
-      {
-        name: "DaisyUI",
-        url: "https://daisyui.com/",
-        type: "CSS",
-        description: "A customizable and modern CSS framework that provides a set of utility classes and components, inspired by Tailwind, and optimized for performance and accessibility."
-      },
-      {
-        name: "Sizzy",
-        url: "https://sizzy.co/",
-        type: "Tools",
-        description: "A web development tool that allows developers to test and preview their websites and apps across multiple devices and viewports, with a synchronized scrolling and debugging experience."
-      },
-      {
-        name: "Picocss",
-        url: "https://picocss.com/",
-        type: "CSS",
-        description: "A tiny (1KB) and modular CSS framework that provides a minimal and responsive set of styles and components, and a simple and extensible API."
-      },
-      {
-        name: "PostHog",
-        url: "https://posthog.com/",
-        type: "Tools",
-        description: "A free and open-source product analytics platform, that allows developers and marketers to track and analyze user behavior, and improve product features and engagement."
-      },
-      {
-        name: "Jina",
-        url: "https://github.com/jina-ai/jina",
-        type: "Tools",
-        description: "A cloud-native and flexible neural search framework, that allows developers to build and scale powerful search applications, using deep learning and natural language processing."
-      },
-      {
-        name: "Squoosh",
-        url: "https://squoosh.app/",
-        type: "Tools",
-        description: "A web-based image optimization tool, that allows developers to compress and resize images, and preview the results in real-time, using various codecs and settings."
-      },
-      {
-        name: "Reakit",
-        url: "https://reakit.io/",
-        type: "JavaScript",
-        description: "A flexible and accessible UI toolkit for React, that provides a set of primitives and components, with support for theming, keyboard navigation, and screen readers."
-      },
-      {
-        name: "Svelte Society",
-        url: "https://sveltesociety.dev/",
-        type: "JavaScript",
-        description: "A community-driven platform for sharing knowledge and resources about the Svelte framework, with events, podcasts, articles, and a directory of projects and companies using Svelte."
-      },
-      {
-        name: "DrawSQL",
-        url: "https://drawsql.app/",
-        type: "Tools",
-        description: "A web-based tool that allows developers and database administrators to visualize and document their databases and schemas, using a drag-and-drop interface and various export formats."
-      },
-      {
-        name: "Blueprints",
-        url: "https://blueprints.dev/",
-        type: "JavaScript",
-        description: "A collection of open-source and modular UI components and design systems, with a focus on accessibility, responsiveness, and modern design trends."
-      },
-      {
-        name: "Logary",
-        url: "https://logary.tech/",
-        type: "Tools",
-        description: "A distributed and extensible logging and metrics platform, that allows developers to collect, aggregate, and analyze log and performance data, using various data sources and integrations."
-      },
-      {
-        name: "Squoosh",
-        url: "https://squoosh.app/",
-        type: "Tools",
-        description: "A web-based image optimization tool, that allows developers to compress and resize images, and preview the results in real-time, using various codecs and settings."
-      },
-      {
-        name: "uPlot",
-        url: "https://leeoniya.github.io/uPlot/",
-        type: "JavaScript",
-        description: "A fast and lightweight charting library for the web, with support for various chart types and features, and a modular and customizable API."
-      },
-      {
-        name: "RealFaviconGenerator",
-        url: "https://realfavicongenerator.net/",
-        type: "Tools",
-        description: "A web-based tool that allows developers to generate and customize favicons and icons for their websites and apps, with support for various platforms and devices."
-      },
-      {
-        name: "Verlok Lazy Load",
-        url: "https://github.com/verlok/lazyload",
-        type: "JavaScript",
-        description: "A powerful and lightweight library for lazy-loading images and other assets, with support for various loading strategies, events, and settings."
-      },
-      {
-        name: "AlaSQL",
-        url: "https://alasql.org/",
-        type: "JavaScript",
-        description: "A fast and flexible SQL engine and database toolkit for JavaScript, with support for various databases, queries, and data formats, and a user-friendly and intuitive API."
-      },
-      {
-        name: "Nano ID",
-        url: "https://github.com/ai/nanoid",
-        type: "JavaScript",
-        description: "A small and secure library for generating unique IDs and strings, using random and non-sequential algorithms, and with support for custom sizes and alphabets."
-      },
-      {
-        name: "Briq",
-        url: "https://briq.dev/",
-        type: "CSS",
-        description: "A customizable and modern CSS framework that provides a set of utility classes and components, inspired by Tailwind, and optimized for performance and ease of use."
-      },
-      {
-        name: "Tocca.js",
-        url: "https://gianlucaguarini.github.io/Tocca.js/",
-        type: "JavaScript",
-        description: "A lightweight and customizable library for touch gestures, that allows developers to add swipe, tap, pinch, and other touch interactions, to their web apps and interfaces."
-      },
-      {
-        name: "Bumpup",
-        url: "https://bumpup.app/",
-        type: "Tools",
-        description: "A web-based tool that allows developers to generate and update version numbers and changelogs for their packages and projects, using various formats and templates."
-      },
-      {
-        name: "Luminous",
-        url: "https://github.com/imgix/luminous",
-        type: "JavaScript",
-        description: "A small and fast library for zooming and viewing images, with support for various image types and options, and a minimalist and customizable design."
-      },
-      {
-        name: "Regex101",
-        url: "https://regex101.com/",
-        type: "Tools",
-        description: "A web-based tool that allows developers to test and debug regular expressions, with real-time matching and highlighting, and a library of examples and patterns."
-      },
-      {
-        name: "Fathom Analytics",
-        url: "https://usefathom.com/",
-        type: "Tools",
-        description: "A privacy-focused and fast web analytics platform, that allows website owners and developers to track and analyze user behavior, without compromising privacy and security."
-      },
-      {
-        name: "Smart Grid",
-        url: "https://github.com/dmitry-lavrik/smart-grid",
-        type: "CSS",
-        description: "A powerful and flexible grid system for CSS, that allows developers to create and customize grids and layouts, using a simple and intuitive syntax, and various options and settings."
-      },
-      {
-        name: "Stitches",
-        url: "https://stitches.dev/",
-        type: "CSS",
-        description: "A modern and lightweight CSS-in-JS library, that allows developers to create and style components using plain CSS syntax, and a powerful and extensible API."
-      },
-      {
-        name: "Inkline",
-        url: "https://inkline.io/",
-        type: "CSS",
-        description: "A modular and customizable CSS framework for building responsive and accessible web interfaces, with a focus on performance, consistency, and ease of use."
-      },
-      {
-        name: "Purgecss",
-        url: "https://purgecss.com/",
-        type: "Tools",
-        description: "A fast and efficient tool for removing unused CSS code from web projects, with support for various file types and build tools, and a customizable configuration."
-      },
-      {
-        name: "TagUI",
-        url: "https://tagui.org/",
-        type: "Tools",
-        description: "A free and open-source tool for automating web tasks and workflows, using a simple and human-readable scripting language, and various integration options."
-      },
-      {
-        name: "Papier",
-        url: "https://getpapier.com/",
-        type: "Design",
-        description: "A web-based tool for creating and sharing design systems and style guides, with a library of components and styles, and integration with popular design tools and platforms."
-      },
-      {
-        name: "Hotkeys",
-        url: "https://wangchujiang.com/hotkeys/",
-        type: "JavaScript",
-        description: "A lightweight and customizable library for keyboard shortcuts, that allows developers to add hotkeys and keybindings, to their web apps and interfaces, with support for various platforms and keys."
-      },
-      {
-        name: "Neumorphism.io",
-        url: "https://neumorphism.io/",
-        type: "Design",
-        description: "A web-based tool for generating and customizing neumorphic design elements, with a library of styles and examples, and export options for popular design tools and formats."
-      },
-      {
-        name: "RxDB",
-        url: "https://rxdb.info/",
-        type: "JavaScript",
-        description: "A powerful and scalable database library for JavaScript, that allows developers to create and manage offline-first applications, with support for various databases, syncing, and encryption."
-      },
-      {
-        name: "Typetura",
-        url: "https://typetura.com/",
-        type: "CSS",
-        description: "A web-based tool for creating and applying variable fonts and typographic styles, with a library of fonts and presets, and integration with popular design tools and platforms."
-      },
-      {
-        name: "Playwright",
-        url: "https://playwright.dev/",
-        type: "Tools",
-        description: "A cross-browser and headless automation library for web testing and browser automation, that allows developers to test and interact with web pages and applications, using various programming languages and environments."
-      },
-      {
-        name: "Glide",
-        url: "https://glidejs.com/",
-        type: "JavaScript",
-        description: "A flexible and lightweight carousel and slider library for the web, with support for various features and options, and a minimalist and easy-to-use API."
-      },
-      {
-        name: "Schematics",
-        url: "https://schematics.dev/",
-        type: "Tools",
-        description: "A CLI tool and library for generating and managing code scaffolds and templates, for various frameworks and libraries, with support for customization, extensibility, and automation."
-      },
-      {
-        name: "Vivid.js",
-        url: "https://webkul.github.io/vivid/",
-        type: "JavaScript",
-        description: "A small and customizable library for drawing and animating SVG icons and illustrations, with support for various shapes and effects, and a simple and intuitive API."
-      },
-      {
-        name: "DataTables",
-        url: "https://datatables.net/",
-        type: "JavaScript",
-        description: "A powerful and flexible table and data grid library for the web, with support for various features and options, and a modular and extensible API."
-      },
-      {
-        name: "Micromodal",
-        url: "https://micromodal.now.sh/",
-        type: "JavaScript",
-        description: "A lightweight and accessible library for creating and managing modal dialogs, with support for various options and styles, and a minimalist and unobtrusive design."
-      },
-      {
-        name: "Unpoly",
-        url: "https://unpoly.com/",
-        type: "JavaScript",
-        description: "A progressive enhancement library for the web, that allows developers to add dynamic and seamless page transitions and interactions, to their web apps and interfaces, with a focus on performance and compatibility."
-      },
-      {
-        name: "Eva Design System",
-        url: "https://eva.design/",
-        type: "Design",
-        description: "A comprehensive and customizable design system for creating modern and responsive web and mobile interfaces, with a library of UI components, icons, and typography."
-      },
-      {
-        name: "Howler.js",
-        url: "https://howlerjs.com/",
-        type: "JavaScript",
-        description: "A JavaScript library for playing and managing audio files and sounds, with support for various formats, effects, and features, and a simple and intuitive API."
-      },
-      {
-        name: "Tiptap",
-        url: "https://tiptap.dev/",
-        type: "JavaScript",
-        description: "A modular and extendable editor for the web, based on the ProseMirror framework, with support for various content types, formatting options, and plugins."
-      },
-      {
-        name: "Twind",
-        url: "https://twind.dev/",
-        type: "CSS",
-        description: "A high-performance and developer-friendly CSS-in-JS library, that allows developers to create and style components using plain CSS syntax, and a powerful and intuitive API."
-      },
-      {
-        name: "Lucide",
-        url: "https://lucide.dev/",
-        type: "Design",
-        description: "A customizable and open-source icon set for the web, with a library of vector icons and symbols, that can be easily styled and animated using CSS and JavaScript."
-      },
-      {
-        name: "Papa Parse",
-        url: "https://www.papaparse.com/",
-        type: "JavaScript",
-        description: "A powerful and flexible CSV parser and converter for the web, that allows developers to parse, transform, and manipulate CSV data, using various options and settings."
-      },
-      {
-        name: "Polly.JS",
-        url: "https://netflix.github.io/pollyjs/",
-        type: "JavaScript",
-        description: "A library for recording and replaying HTTP requests and responses, for testing and mocking web applications, with support for various frameworks and environments."
-      },
-      {
-        name: "Luxon",
-        url: "https://moment.github.io/luxon/",
-        type: "JavaScript",
-        description: "A library for working with dates and times in JavaScript, that provides a simple and powerful API, with support for time zones, calendars, and internationalization."
-      },
-      {
-        name: "Boxicons",
-        url: "https://boxicons.com/",
-        type: "Design",
-        description: "A customizable and open-source icon set for the web, with a library of vector icons and symbols, that can be easily styled and animated using CSS and JavaScript."
-      },
-      {
-        name: "PDFShift",
-        url: "https://pdfshift.io/",
-        type: "Tools",
-        description: "A web-based tool and API for converting HTML and CSS to PDF, with support for various options and settings, and integration with popular web frameworks and platforms."
-      },
-      {
-        name: "Reakit",
-        url: "https://reakit.io/",
-        type: "JavaScript",
-        description: "A highly accessible and customizable UI toolkit for React, that provides a set of components and utilities, that can be easily extended and styled, to meet the needs of various users and contexts."
-      },
-      {
-        name: "OSS Index",
-        url: "https://ossindex.sonatype.org/",
-        type: "Tools",
-        description: "A free and open-source vulnerability scanner and information service, that allows developers and users to find and analyze security vulnerabilities in software components and packages, and take proactive measures to mitigate risks and threats."
-      },
-      {
-        name: "Draggable",
-        url: "https://shopify.github.io/draggable/",
-        type: "JavaScript",
-        description: "A powerful and flexible library for drag and drop interactions, that allows developers to create and customize draggable elements and containers, using various options and settings."
-      },
-      {
-        name: "Stimulus",
-        url: "https://stimulus.hotwire.dev/",
-        type: "JavaScript",
-        description: "A modest and lightweight framework for building reactive web applications, that focuses on enhancing existing HTML and CSS with minimal JavaScript, and provides a set of controllers and behaviors, that can be easily integrated and extended."
-      },
-      {
-        name: "Hamburgers",
-        url: "https://jonsuh.com/hamburgers/",
-        type: "CSS",
-        description: "A collection of CSS-animated hamburger icons, that can be easily integrated and customized, to create responsive and accessible menus and navigation bars, for web and mobile interfaces."
-      },
-      {
-        name: "Kendo UI",
-        url: "https://www.telerik.com/kendo-ui",
-        type: "JavaScript",
-        description: "A comprehensive and feature-rich framework for building modern and responsive web applications, that provides a wide range of UI components, data visualization tools, and productivity features, for various web platforms and frameworks."
-      },
-      {
-        name: "Schema",
-        url: "https://schema.app/",
-        type: "Tools",
-        description: "A web-based tool and API for creating and generating JSON-LD structured data, for various web applications and platforms, with support for various schemas and formats, and a user-friendly and customizable interface."
-      },
-      {
-        name: "Embla Carousel",
-        url: "https://davidcetinkaya.github.io/embla-carousel/",
-        type: "JavaScript",
-        description: "A lightweight and customizable carousel and slider library for the web, with support for various features and options, and a minimalist and performant design."
-      },
-      {
-        name: "PixelSnap",
-        url: "https://getpixelsnap.com/",
-        type: "Tools",
-        description: "A tool for measuring and aligning design elements and layouts, on the web and desktop, that provides a set of tools and features, for precise and efficient design work."
-      },
-      {
-        name: "TinyMusic",
-        url: "https://github.com/kevincennis/TinyMusic",
-        type: "JavaScript",
-        description: "A small and simple library for generating and playing music notes and melodies, using JavaScript and the Web Audio API, with support for various instruments and options."
-      },
-      {
-        name: "MVP.css",
-        url: "https://andybrewer.github.io/mvp/",
-        type: "CSS",
-        description: "A minimalist and lightweight CSS framework, that provides a set of styles and components, for creating simple and elegant web interfaces, with a focus on speed, readability, and accessibility."
-      },
-      {
-        name: "Popmotion",
-        url: "https://popmotion.io/",
-        type: "JavaScript",
-        description: "A library for creating and animating UI elements and visual effects, using JavaScript and CSS, that provides a set of tools and features, for building interactive and responsive web interfaces."
-      },
-      {
-        name: "OpenSeadragon",
-        url: "https://openseadragon.github.io/",
-        type: "JavaScript",
-        description: "A powerful and flexible viewer for high-resolution images and maps, that allows users to zoom, pan, and navigate through large and complex datasets, with support for various formats and features."
-      },
-      {
-        name: "Harken",
-        url: "https://github.com/philipwalton/harken",
-        type: "JavaScript",
-        description: "A small and flexible event library for JavaScript, that allows developers to manage and dispatch events, using various methods and patterns, with support for cross-browser compatibility and performance."
-      },
-      {
-        name: "Kite",
-        url: "https://kiteapp.co/",
-        type: "Tools",
-        description: "An AI-powered code completion and suggestion tool, that helps developers to write better and faster code, by providing intelligent and context-aware suggestions, based on their coding habits and patterns."
-      },
-      {
-        name: "Tone.js",
-        url: "https://tonejs.github.io/",
-        type: "JavaScript",
-        description: "A web-based music creation and performance library, that provides a set of tools and features, for generating and playing musical notes and sequences, using JavaScript and the Web Audio API."
-      },
-      {
-        name: "Toast UI Editor",
-        url: "https://ui.toast.com/tui-editor/",
-        type: "JavaScript",
-        description: "A full-featured and customizable editor for the web, that provides a set of tools and features, for creating and editing rich text and markdown content, with support for various formats and platforms."
-      },
-      {
-        name: "CardKit",
-        url: "https://cardkit.org/",
-        type: "Design",
-        description: "A web-based tool and library for creating and customizing interactive and dynamic card designs, with a set of templates and components, that can be easily integrated and extended."
-      },
-      {
-        name: "Chroma.js",
-        url: "https://gka.github.io/chroma.js/",
-        type: "JavaScript",
-        description: "A library for working with colors and color schemes in JavaScript, that provides a set of tools and features, for generating, manipulating, and visualizing colors and gradients, with support for various formats and systems."
-      },
-      {
-        name: "GitSheet",
-        url: "https://gitsheet.wtf/",
-        type: "Tools",
-        description: "A web-based cheat sheet and reference guide for Git, that provides a quick and easy way to learn and use Git commands and workflows, with examples and explanations."
-      },
-      {
-        name: "Notyf",
-        url: "https://carlosroso.com/notyf/",
-        type: "JavaScript",
-        description: "A simple and flexible notification library for the web, that allows developers to create and display custom notifications and alerts, with various styles and animations, using a lightweight and easy-to-use API."
-      },
-      {
-        name: "Jssor Slider",
-        url: "https://www.jssor.com/",
-        type: "JavaScript",
-        description: "A flexible and feature-rich slider and gallery library for the web, that allows developers to create and customize responsive and animated sliders, with various transitions and effects."
-      },
-      {
-        name: "Torus",
-        url: "https://torus.sh/",
-        type: "Tools",
-        description: "An open-source and decentralized authentication platform, that allows users to securely login and verify their identities, without passwords or personal data, using blockchain and cryptography technologies."
-      },
-      {
-        name: "xstyled",
-        url: "https://xstyled.dev/",
-        type: "CSS",
-        description: "A utility-first and theme-based CSS-in-JS library, that allows developers to create and style components using simple and consistent props and values, and a robust and extendable theme system."
-      },
-      {
-        name: "Highway",
-        url: "https://highway.js.org/",
-        type: "JavaScript",
-        description: "A lightweight and flexible library for creating and managing animated transitions and layouts, in web applications and interfaces, with support for various features and options."
-      },
-      {
-        name: "Blotter.js",
-        url: "https://blotter.js.org/",
-        type: "JavaScript",
-        description: "A library for creating and animating text effects and shaders, using WebGL and Three.js, that provides a set of tools and features, for generating dynamic and artistic typographies and graphics."
-      },
-      {
-        name: "Squoosh",
-        url: "https://squoosh.app/",
-        type: "Tools",
-        description: "A web-based tool and API for optimizing and compressing images, for various web platforms and use cases, with support for various formats and settings, and a user-friendly and responsive interface."
-      },
-      {
-        name: "Spectre.css",
-        url: "https://picturepan2.github.io/spectre/",
-        type: "CSS",
-        description: "A minimalist and lightweight CSS framework, that provides a set of styles and components, for creating modern and responsive web interfaces, with a focus on simplicity, performance, and flexibility."
-      },
-      {
-        name: "Parsley.js",
-        url: "https://parsleyjs.org/",
-        type: "JavaScript",
-        description: "A flexible and customizable form validation library for the web, that allows developers to define and enforce various validation rules and patterns, using a declarative and intuitive API."
-      },
-      {
-        name: "EVA",
-        url: "https://eva.js.org/",
-        type: "JavaScript",
-        description: "A lightweight and efficient animation library for the web, that provides a set of tools and features, for creating and managing animations and transitions, using a simple and concise syntax."
-      },
-      {
-        name: "BasicScroll",
-        url: "https://basicscroll.electerious.com/",
-        type: "JavaScript",
-        description: "A library for creating and animating scroll-based effects and animations, in web applications and interfaces, using a declarative and easy-to-use syntax, and a lightweight and efficient implementation."
-      },
-      {
-        name: "Kartograph",
-        url: "http://kartograph.org/",
-        type: "Tools",
-        description: "A library for creating and manipulating interactive maps and visualizations, using SVG and JavaScript, that provides a set of tools and features, for generating and customizing maps, with support for various projections and formats."
-      },
-      {
-        name: "Imager.js",
-        url: "https://imagerjs.com/",
-        type: "JavaScript",
-        description: "A library for creating and managing responsive and optimized images, in web applications and interfaces, that provides a set of tools and features, for loading, resizing, and optimizing images, based on the device and viewport size."
-      },
-      {
-        name: "Midnight.js",
-        url: "https://aerolab.github.io/midnight.js/",
-        type: "JavaScript",
-        description: "A library for creating and managing smooth and animated transitions and effects, between different sections and elements, in web applications and interfaces, using a simple and intuitive API."
-      },
-      {
-        name: "Tippy.js",
-        url: "https://atomiks.github.io/tippyjs/",
-        type: "JavaScript",
-        description: "A lightweight and flexible tooltip library for the web, that allows developers to create and customize tooltips and popovers, with various styles and behaviors, using a simple and efficient API."
-      },
-      {
-        name: "React Move",
-        url: "https://react-move.js.org/",
-        type: "JavaScript",
-        description: "A library for creating and managing animated transitions and effects, in React-based web applications and interfaces, that provides a set of tools and features, for generating and customizing animations, based on data and events."
-      },
-      {
-        name: "Rough.js",
-        url: "https://roughjs.com/",
-        type: "JavaScript",
-        description: "A library for creating and styling hand-drawn graphics and illustrations, on the web, that provides a set of tools and features, for generating and customizing various shapes and styles, using a simple and expressive syntax."
-      },
-      {
-        name: "Tufte CSS",
-        url: "https://edwardtufte.github.io/tufte-css/",
-        type: "CSS",
-        description: "A minimalist and elegant CSS framework, that provides a set of styles and components, for creating and presenting high-quality and informative content, with a focus on typography, layout, and readability."
-      },
-      {
-        name: "Preact",
-        url: "https://preactjs.com/",
-        type: "JavaScript",
-        description: "A fast and lightweight alternative to React, that provides a similar API and features, for building efficient and modular web applications and interfaces, with a smaller and more optimized footprint."
-      },
-      {
-        name: "Ink",
-        url: "https://github.com/vadimdemedes/ink",
-        type: "JavaScript",
-        description: "A library for building command-line interfaces and tools, using React components and declarative syntax, that provides a set of tools and features, for creating and managing terminal-based applications and workflows."
-      },
-      {
-        name: "Splitting.js",
-        url: "https://splitting.js.org/",
-        type: "JavaScript",
-        description: "A library for creating and managing responsive and dynamic text splitting and animations, in web applications and interfaces, using a simple and intuitive API, and a flexible and efficient implementation."
-      },
-      {
-        name: "Pinafore",
-        url: "https://pinafore.social/",
-        type: "JavaScript",
-        description: "A fast and minimal web client for Mastodon, the decentralized social network, that provides a simple and responsive interface, with a focus on accessibility and user experience."
-      },
-      {
-        name: "Vivus",
-        url: "https://maxwellito.github.io/vivus/",
-        type: "JavaScript",
-        description: "A library for creating and animating SVG-based illustrations and icons, in web applications and interfaces, using various methods and styles, that provides a set of tools and features, for generating and customizing animations, based on the shape and path of the SVG elements."
-      },
-      {
-        name: "Svelte",
-        url: "https://svelte.dev/",
-        type: "JavaScript",
-        description: "A component-based and reactive framework for building fast and lightweight web applications and interfaces, that provides a simple and intuitive API and syntax, and a compiler-based approach, for generating optimized and efficient code."
-      },
-      {
-        name: "GreenSock",
-        url: "https://greensock.com/",
-        type: "JavaScript",
-        description: "A library for creating and managing advanced animations and transitions, in web applications and interfaces, using a robust and powerful API and syntax, that provides a wide range of features and tools, for generating and customizing animations, based on various parameters and events."
-      },
-      {
-        name: "Zdog",
-        url: "https://zzz.dog/",
-        type: "JavaScript",
-        description: "A library for creating and animating 3D shapes and models, in web applications and interfaces, using a simple and declarative API and syntax, that provides a set of tools and features, for generating and customizing 3D graphics, with a focus on performance and efficiency."
-      },
-      {
-        name: "React Spring",
-        url: "https://www.react-spring.io/",
-        type: "JavaScript",
-        description: "A library for creating and managing advanced and fluid animations and transitions, in React-based web applications and interfaces, using a physics-based approach, that provides a set of tools and features, for generating and customizing animations, based on various forces and constraints."
-      },
-      {
-        name: "TeXt",
-        url: "https://kitian616.github.io/text/",
-        type: "CSS",
-        description: "A minimal and responsive CSS framework, that provides a set of styles and components, for creating and formatting text-based content, with a focus on typography, spacing, and readability."
-      },
-      {
-        name: "ScrollReveal",
-        url: "https://scrollrevealjs.org/",
-        type: "JavaScript",
-        description: "A library for creating and managing scroll-based effects and animations, in web applications and interfaces, using a declarative and intuitive API and syntax, that provides a set of tools and features, for generating and customizing animations, based on the scroll position and direction."
-      },
-      {
-        name: "Ztext",
-        url: "https://bennettfeely.com/ztext/",
-        type: "JavaScript",
-        description: "A library for creating and animating 3D text and typography, in web applications and interfaces, using a simple and lightweight API and syntax, that provides a set of tools and features, for generating and customizing 3D text effects, based on various parameters and styles."
-      },
-      {
-        name: "Whimsical",
-        url: "https://whimsical.com/",
-        type: "Tools",
-        description: "A web-based tool for creating and sharing diagrams, flowcharts, wireframes, and other visual assets, that provides a set of templates and tools, for generating and customizing various designs, with a focus on collaboration and communication."
-      },
-      {
-        name: "Flickity",
-        url: "https://flickity.metafizzy.co/",
-        type: "JavaScript",
-        description: "A library for creating and managing touch-based and responsive carousels and sliders, in web applications and interfaces, that provides a set of features and options, for generating and customizing various styles and behaviors, with a focus on performance and accessibility."
-      },
-      {
-        name: "Torus-CLI",
-        url: "https://docs.toruswallet.io/build/key-management/torus-cli/",
-        type: "Tools",
-        description: "A command-line interface for interacting with the Torus authentication platform, that allows users to securely login and verify their identities, without passwords or personal data, using blockchain and cryptography technologies."
-      },
-      {
-        name: "Litepicker",
-        url: "https://wakirin.github.io/Litepicker/",
-        type: "JavaScript",
-        description: "A lightweight and flexible date and time picker library for the web, that allows users to select and display dates and times, with various formats and styles, using a simple and intuitive interface."
-      },
-      {
-        name: "Nano ID",
-        url: "https://zelark.github.io/nano-id-cc/",
-        type: "JavaScript",
-        description: "A tiny and secure library for generating unique and random IDs and tokens, in web applications and interfaces, that provides a set of methods and options, for creating and verifying various types of IDs, with a low collision rate and a small footprint."
-      },
-      {
-        name: "Mavo",
-        url: "https://mavo.io/",
-        type: "JavaScript",
-        description: "A declarative and lightweight framework for creating and managing dynamic and interactive web applications and interfaces, using HTML and CSS, that provides a set of tools and features, for generating and customizing various components and behaviors, without the need for JavaScript or back-end programming."
-      },
-      {
-        name: "Bideo.js",
-        url: "https://rishabhp.github.io/bideo.js/",
-        type: "JavaScript",
-        description: "A library for creating and managing full-screen and background videos, in web applications and interfaces, using a simple and responsive API and syntax, that provides a set of tools and features, for generating and customizing various types of videos, with a focus on performance and quality."
-      },
-      {
-        name: "Midori",
-        url: "https://github.com/kristoferjoseph/midori",
-        type: "CSS",
-        description: "A modern and responsive CSS framework, that provides a set of styles and components, for creating and styling web interfaces and layouts, with a focus on simplicity, consistency, and flexibility."
-      },
-      {
-        name: "Inkdrop",
-        url: "https://www.inkdrop.app/",
-        type: "Tools",
-        description: "A cross-platform and secure note-taking app, for developers and designers, that provides a set of tools and features, for organizing, writing, and sharing notes, with a focus on productivity and efficiency."
-      },
-      {
-        name: "Moonjs",
-        url: "https://moonjs.org/",
-        type: "JavaScript",
-        description: "A minimalist and modular framework for building web applications and interfaces, using JavaScript and HTML, that provides a set of tools and features, for generating and customizing various components and behaviors, with a focus on simplicity and performance."
-      },
-      {
-        name: "Kakoune",
-        url: "https://kakoune.org/",
-        type: "Tools",
-        description: "A fast and extensible text editor, with a client-server architecture, that provides a set of tools and features, for editing and manipulating text files, with a focus on modularity and efficiency."
-      },
-      {
-        name: "RoughNotation",
-        url: "https://roughnotation.com/",
-        type: "JavaScript",
-        description: "A library for creating and annotating web elements and components, with hand-drawn and sketchy effects, using SVG and JavaScript, that provides a set of tools and features, for generating and customizing various styles and animations, with a focus on visual interest and storytelling."
-      },
-      {
-        name: "GrapesJS",
-        url: "https://grapesjs.com/",
-        type: "Tools",
-        description: "A web-based page builder and editor, that allows users to create and design web pages and templates, using a drag-and-drop interface and a set of built-in components and styles, with a focus on usability and customization."
-      },
-      {
-        name: "Stacker",
-        url: "https://stacker.app/",
-        type: "Tools",
-        description: "A web-based app for creating and managing landing pages and websites, using a visual and intuitive interface, that provides a set of tools and features, for designing and customizing various elements and sections, with a focus on conversion and optimization."
-      },
-      {
-        name: "Notyf",
-        url: "https://carlosroso.com/notyf/",
-        type: "JavaScript",
-        description: "A lightweight and customizable library for displaying notifications and alerts, in web applications and interfaces, using a simple and intuitive API and syntax, that provides a set of options and styles, for generating and managing various types of notifications, with a focus on user experience and accessibility."
-      },
-      {
-        name: "Nano-SQL",
-        url: "https://nanosql.io/",
-        type: "JavaScript",
-        description: "A simple and powerful library for managing and querying databases, in web applications and interfaces, using a flexible and intuitive API and syntax, that provides a set of features and options, for generating and customizing various types of databases, with a focus on scalability and performance."
-      },
-      {
-        name: "Featherlight",
-        url: "https://noelboss.github.io/featherlight/",
-        type: "JavaScript",
-        description: "A lightweight and responsive lightbox plugin for displaying images, videos, and other media, in web applications and interfaces, using a simple and intuitive API and syntax, that provides a set of options and styles, for generating and managing various types of lightboxes, with a focus on accessibility and ease of use."
-      }
-    
-  ];
- 
-  db.resources.insertMany(resources)
+  {
+    name: "Interactive Landscapes",
+    url: "https://interactive.landscapes.eco/",
+    type: "HTML",
+    description: "An interactive and educational project that showcases different landscapes and ecosystems, around the world, using a combination of HTML, CSS, and JavaScript, that provides a set of tools and features, for exploring and learning about various natural environments and species."
+  },
+  {
+    name: "Dashed Lines",
+    url: "https://css-tricks.com/examples/DashedLines/",
+    type: "HTML",
+    description: "A tutorial and demo that explains how to create and style dashed and dotted lines, using only HTML and CSS, that provides a set of examples and techniques, for generating and customizing various types of lines, with a focus on design and creativity."
+  },
+  {
+    name: "Solved by Flexbox",
+    url: "https://philipwalton.github.io/solved-by-flexbox/",
+    type: "HTML",
+    description: "A tutorial and resource that explains how to use CSS flexbox, to solve common layout and alignment problems, in web design and development, that provides a set of examples and code snippets, for generating and customizing various types of layouts, with a focus on responsiveness and efficiency."
+  },
+  {
+    name: "Nice Page Transitions",
+    url: "https://tympanus.net/Development/PageTransitions/",
+    type: "HTML",
+    description: "A collection of creative and smooth page transition effects, using only HTML, CSS, and JavaScript, that provides a set of examples and demos, for generating and customizing various types of transitions, with a focus on user experience and engagement."
+  },
+  {
+    name: "Neumorphism",
+    url: "https://neumorphism.io/",
+    type: "HTML",
+    description: "A showcase and tutorial that explains how to create and apply neumorphic design, using only HTML, CSS, and JavaScript, that provides a set of examples and tools, for generating and customizing various types of neumorphic elements and components, with a focus on modernity and elegance."
+  },
+  {
+    name: "HTML9 Responsive Boilerstrap JS",
+    url: "https://html9responsiveboilerstrapjs.com/",
+    type: "HTML",
+    description: "A satirical and humorous website that parodies the hype and complexity of web development, using a mix of nonsensical and hilarious jargon and buzzwords, that provides a set of absurd and ridiculous code snippets and examples, for generating and customizing various types of layouts and components, with a focus on entertainment and irony."
+  },
+  {
+    name: "CSS Text",
+    url: "https://css-tricks.com/almanac/properties/t/text/",
+    type: "HTML",
+    description: "A comprehensive guide and reference, that explains how to style and format text, using CSS, that provides a set of properties and values, for generating and customizing various aspects of text, with a focus on readability and accessibility."
+  },
+  {
+    name: "Let's Make a Grid",
+    url: "https://cssgrid.io/",
+    type: "HTML",
+    description: "A free and interactive video course, that teaches how to use CSS grid, to create and manage complex and responsive layouts, in web design and development, that provides a set of lessons and exercises, for mastering various aspects of grid, with a focus on practicality and hands-on experience."
+  },
+  {
+    name: "Viewport Units Buggyfill",
+    url: "https://github.com/rodneyrehm/viewport-units-buggyfill",
+    type: "HTML",
+    description: "A JavaScript library that enables the use of viewport units (vh, vw, vmin, vmax) in older browsers that do not support them, by calculating and updating them dynamically, based on the dimensions of the viewport and the content."
+  },
+  {
+    name: "HTML Online",
+    url: "https://html-online.com/",
+    type: "HTML",
+    description: "An online HTML editor and converter, that allows users to create, edit, and preview HTML code, using a visual and intuitive interface, that provides a set of tools and features, for generating and customizing various types of elements and components."
+  },
+  {
+    name: "CSS Doodle",
+    url: "https://css-doodle.com/",
+    type: "HTML",
+    description: "A web-based platform for creating and sharing generative art and animations, using CSS and HTML, that provides a set of properties and functions, for generating and customizing various shapes and patterns, with a focus on creativity and experimentation."
+  },
+  {
+    name: "Hint.css",
+    url: "https://kushagra.dev/lab/hint/",
+    type: "HTML",
+    description: "A lightweight and flexible library for adding tooltips and hints, to HTML elements, using CSS and JavaScript, that provides a set of styles and options, for generating and customizing various types of hints, with a focus on usability and accessibility."
+  },
+  {
+    name: "CSS Grid Generator",
+    url: "https://cssgrid-generator.netlify.app/",
+    type: "HTML",
+    description: "A web-based tool for generating and customizing CSS grid layouts, using a visual and interactive interface, that provides a set of options and properties, for creating and managing various types of grids, with a focus on efficiency and simplicity."
+  },
+  {
+    name: "Grain",
+    url: "https://grain.design/",
+    type: "HTML",
+    description: "A library of free and customizable SVG illustrations, icons, and animations, that can be used in web design and development, that provides a set of tools and features, for downloading and customizing various types of graphics, with a focus on quality and diversity."
+  },
+  {
+    name: "Shape Divider",
+    url: "https://www.shapedivider.app/",
+    type: "HTML",
+    description: "A web-based tool for generating and customizing shape dividers, that can be used to separate sections and elements in web pages, using SVG and CSS, that provides a set of options and styles, for creating and modifying various types of dividers, with a focus on creativity and innovation."
+  },
+  {
+    name: "Gutenberg Hub",
+    url: "https://www.gutenberghub.com/",
+    type: "HTML",
+    description: "A marketplace and library of free and premium blocks, templates, and plugins, for the WordPress Gutenberg editor, that provides a set of tools and features, for enhancing and extending the functionality and design of WordPress websites and blogs."
+  },
+  {
+    name: "WebSlides",
+    url: "https://webslides.tv/",
+    type: "HTML",
+    description: "A web-based framework for creating and presenting slide decks and presentations, using HTML, CSS, and JavaScript, that provides a set of tools and features, for designing and customizing various types of slides, with a focus on interactivity and engagement."
+  },
+  {
+    name: "Nano ID",
+    url: "https://zelark.github.io/nano-id-cc/",
+    type: "HTML",
+    description: "A small and secure library for generating and validating unique and random IDs, using JavaScript, that provides a set of functions and options, for generating and customizing various types of IDs, with a focus on simplicity and reliability."
+  },
+  {
+    name: "Typed.js",
+    url: "https://mattboldt.com/demos/typed-js/",
+    type: "HTML",
+    description: "A library for creating and animating typed text, in web pages and interfaces, using JavaScript and HTML, that provides a set of options and styles, for generating and customizing various types of effects and behaviors, with a focus on user experience and creativity."
+  },
+  {
+    name: "WebAssembly Explorer",
+    url: "https://mbebenita.github.io/WasmExplorer/",
+    type: "HTML",
+    description: "A web-based tool for exploring and analyzing WebAssembly (WASM) code, using a visual and interactive interface, that provides a set of features and functions, for testing and debugging various types of WASM modules and functions, with a focus on performance and optimization."
+  },
+  {
+    name: "Splitting.js",
+    url: "https://splitting.js.org/",
+    type: "HTML",
+    description: "A JavaScript library for splitting and animating text, in web pages and interfaces, using HTML and CSS, that provides a set of options and styles, for generating and customizing various types of text effects and animations, with a focus on versatility and ease of use."
+  },
+  {
+    name: "Thimble",
+    url: "https://thimble.mozilla.org/",
+    type: "HTML",
+    description: "An online code editor and publishing platform, that allows users to create and share HTML, CSS, and JavaScript projects, using a visual and intuitive interface, that provides a set of tools and features, for designing and customizing various types of elements and components."
+  },
+  {
+    name: "JigSaw",
+    url: "https://jigsaw.w3.org/css-validator/",
+    type: "HTML",
+    description: "A CSS validation service and tool, provided by the W3C (World Wide Web Consortium), that checks and analyzes CSS code, for syntax errors and compatibility issues, with a focus on standards compliance and best practices."
+  },
+  {
+    name: "LoadJS",
+    url: "https://github.com/muicss/loadjs",
+    type: "HTML",
+    description: "A lightweight and fast JavaScript loader, that allows users to load and execute JavaScript files, asynchronously and in parallel, using a simple and intuitive API, that provides a set of options and methods, for optimizing and managing various types of scripts, with a focus on performance and scalability."
+  },
+  {
+    name: "Picnic CSS",
+    url: "https://picnicss.com/",
+    type: "HTML",
+    description: "A lightweight and minimalistic CSS framework, that provides a set of styles and components, for building and styling responsive web pages and interfaces, with a focus on simplicity and flexibility."
+  },
+  {
+    name: "Flowy",
+    url: "https://github.com/alyssaxuu/flowy",
+    type: "HTML",
+    description: "A web-based tool for creating and editing flowcharts and diagrams, using a drag-and-drop interface and HTML, CSS, and JavaScript, that provides a set of features and options, for generating and customizing various types of charts and visualizations, with a focus on usability and interactivity."
+  },
+  {
+    name: "Pico.css",
+    url: "https://picocss.com/",
+    type: "HTML",
+    description: "A lightweight and modular CSS framework, that provides a set of styles and components, for building and styling web pages and interfaces, with a focus on modularity and ease of use."
+  },
+  {
+    name: "HTML5 Up",
+    url: "https://html5up.net/",
+    type: "HTML",
+    description: "A collection of free and responsive HTML templates, for building and designing web pages and interfaces, that provides a set of designs and layouts, for various types of projects and industries, with a focus on quality and modernity."
+  },
+  {
+    name: "ScrollTrigger",
+    url: "https://greensock.com/scrolltrigger/",
+    type: "HTML",
+    description: "A JavaScript plugin for creating and managing scroll-based animations and effects, in web pages and interfaces, using HTML, CSS, and JavaScript, that provides a set of functions and options, for generating and customizing various types of behaviors and transitions, with a focus on performance and flexibility."
+  },
+  {
+    name: "CodePen",
+    url: "https://codepen.io/",
+    type: "HTML",
+    description: "An online code editor and social development platform, that allows users to create, share, and discover HTML, CSS, and JavaScript projects, using a visual and collaborative interface, that provides a set of tools and features, for designing and coding various types of elements and components."
+  },
+  {
+    name: "Cubic Bezier",
+    url: "https://cubic-bezier.com/",
+    type: "HTML",
+    description: "An online tool for generating and testing cubic-bezier functions, that can be used to create and customize easing curves, in web animations and transitions, using a visual and intuitive interface, that provides a set of options and previews, for experimenting and fine-tuning various types of curves and timings."
+  },
+  {
+    name: "Quill",
+    url: "https://quilljs.com/",
+    type: "HTML",
+    description: "A JavaScript library for creating and editing rich-text content, in web pages and interfaces, using a customizable and extensible API, that provides a set of functions and options, for generating and managing various types of formatting and styling, with a focus on user experience and accessibility."
+  },
+  {
+    name: "Browsersync",
+    url: "https://www.browsersync.io/",
+    type: "HTML",
+    description: "A web development tool for synchronizing and testing changes across multiple devices and browsers, using a local server and a set of automation and optimization features, that provide a seamless and efficient workflow for web development and testing."
+  },
+  {
+    name: "Knacss",
+    url: "https://www.knacss.com/",
+    type: "HTML",
+    description: "A responsive and modular CSS framework, that provides a set of styles and components, for building and styling web pages and interfaces, with a focus on accessibility and performance."
+  },
+  {
+    name: "Baffle.js",
+    url: "https://camwiegert.github.io/baffle/",
+    type: "HTML",
+    description: "A JavaScript library for obfuscating and revealing text, in web pages and interfaces, using a customizable and animated API, that provides a set of options and effects, for generating and managing various types of obfuscation and encryption, with a focus on creativity and security."
+  },
+  {
+    name: "Bulma",
+    url: "https://bulma.io/",
+    type: "HTML",
+    description: "A modern and flexible CSS framework, that provides a set of styles and components, for building and styling responsive web pages and interfaces, with a focus on modularity and extensibility."
+  },
+  {
+    name: "Twill",
+    url: "https://twill.io/",
+    type: "HTML",
+    description: "An open-source and modular CMS (Content Management System), built on top of Laravel and Vue.js, that provides a set of tools and features, for creating and managing various types of content, with a focus on simplicity and customization."
+  },
+  {
+    name: "Tailwind Toolbox",
+    url: "https://www.tailwindtoolbox.com/",
+    type: "HTML",
+    description: "A collection of free and customizable HTML templates and components, that use the Tailwind CSS framework, for building and designing web pages and interfaces, that provides a set of designs and layouts, for various types of projects and industries, with a focus on flexibility and ease of use."
+  },
+  {
+    name: "CSS Gradient Animator",
+    url: "https://www.gradient-animator.com/",
+    type: "HTML",
+    description: "An online tool for creating and animating CSS gradients, in web pages and interfaces, using a visual and interactive interface, that provides a set of options and presets, for generating and customizing various types of gradients and animations, with a focus on creativity and innovation."
+  },
+  {
+    name: "Simple Grid",
+    url: "https://simplegrid.io/",
+    type: "HTML",
+    description: "A lightweight and responsive CSS grid system, that provides a set of classes and styles, for building and designing web pages and interfaces, with a focus on simplicity and compatibility."
+  },
+  {
+    name: "CSS Doodle",
+    url: "https://css-doodle.com/",
+    type: "HTML",
+    description: "A web-based tool for creating and animating visual patterns and shapes, using CSS and HTML, that provides a set of options and presets, for generating and customizing various types of designs and animations, with a focus on creativity and experimentation."
+  },
+  {
+    name: "Yellin",
+    url: "https://yellin.dev/",
+    type: "HTML",
+    description: "A web-based tool for creating and editing SVG icons and illustrations, using a simple and intuitive interface and a set of drawing and editing tools, that provides a set of features and options, for generating and customizing various types of icons and graphics, with a focus on versatility and ease of use."
+  },
+  {
+    name: "VuePress",
+    url: "https://vuepress.vuejs.org/",
+    type: "HTML",
+    description: "A Vue.js-based static site generator, that provides a set of tools and features, for creating and publishing documentation and websites, with a focus on simplicity and performance."
+  },
+  {
+    name: "BEMIT",
+    url: "https://css-tricks.com/bemit-naming-convention/",
+    type: "HTML",
+    description: "A naming convention and methodology, for creating and managing CSS classes and styles, in web pages and interfaces, that provides a set of guidelines and best practices, for structuring and organizing various types of elements and components, with a focus on readability and maintainability."
+  },
+  {
+    name: "Umbrella JS",
+    url: "https://umbrellajs.com/",
+    type: "HTML",
+    description: "A small and fast JavaScript library, for DOM manipulation and event handling, in web pages and interfaces, that provides a set of functions and methods, for selecting and modifying various types of elements and attributes, with a focus on simplicity and performance."
+  },
+  {
+    name: "Visual Box Model",
+    url: "https://chrome.google.com/webstore/detail/visual-box-model/epejoicbhllgiimigokgjdoijnpaphdp",
+    type: "HTML",
+    description: "A Chrome extension, for inspecting and visualizing the box model and layout, of HTML elements and components, in web pages and interfaces, that provides a set of tools and features, for measuring and analyzing various types of properties and dimensions, with a focus on design and debugging."
+  },
+  {
+    name: "CodyHouse",
+    url: "https://codyhouse.co/",
+    type: "HTML",
+    description: "A collection of free and customizable HTML templates and components, for building and designing web pages and interfaces, that provides a set of designs and layouts, for various types of projects and industries, with a focus on innovation and creativity."
+  },
+  {
+    name: "Markup Validation Service",
+    url: "https://validator.w3.org/",
+    type: "HTML",
+    description: "A web-based tool and service, provided by the W3C (World Wide Web Consortium), for validating and checking the syntax and compatibility, of HTML code and documents, with a focus on standards compliance and best practices."
+  },
+  {
+    name: "BrandColors",
+    url: "https://brandcolors.net/",
+    type: "Design",
+    description: "A collection of brand color codes, for various companies and organizations, that provides a set of colors and palettes, for designing and styling various types of elements and components, with a focus on consistency and accuracy."
+  },
+  {
+    name: "Coolors",
+    url: "https://coolors.co/",
+    type: "Design",
+    description: "A web-based tool for generating and exploring color palettes, for web and graphic design, using a visual and interactive interface, that provides a set of options and presets, for creating and customizing various types of color schemes and harmonies, with a focus on usability and accessibility."
+  },
+  {
+    name: "Design Cuts",
+    url: "https://www.designcuts.com/",
+    type: "Design",
+    description: "An online marketplace and community, for buying and selling design resources and assets, that provides a set of products and deals, for various types of design projects and industries, with a focus on quality and affordability."
+  },
+  {
+    name: "Designspiration",
+    url: "https://www.designspiration.com/",
+    type: "Design",
+    description: "An online platform and community, for discovering and sharing design inspiration and ideas, that provides a set of curated galleries and collections, for various types of design styles and trends, with a focus on creativity and innovation."
+  },
+  {
+    name: "CSS Scan",
+    url: "https://getcssscan.com/",
+    type: "Design",
+    description: "A browser extension and tool, for inspecting and copying CSS styles and properties, from any web page, that provides a set of features and options, for analyzing and reproducing various types of design elements and components, with a focus on efficiency and productivity."
+  },
+  {
+    name: "UI Gradient",
+    url: "https://uigradients.com/",
+    type: "Design",
+    description: "A collection of gradient backgrounds and patterns, for web and graphic design, that provides a set of color combinations and styles, for designing and styling various types of interfaces and layouts, with a focus on aesthetics and usability."
+  },
+  {
+    name: "Humaaans",
+    url: "https://www.humaaans.com/",
+    type: "Design",
+    description: "A web-based tool and library, for creating and customizing vector illustrations and characters, for web and graphic design, that provides a set of elements and features, for generating and adapting various types of poses and expressions, with a focus on diversity and inclusion."
+  },
+  {
+    name: "Logobly",
+    url: "https://logobly.com/",
+    type: "Design",
+    description: "A web-based tool and service, for creating and customizing logo designs, for various types of businesses and organizations, that provides a set of templates and features, for generating and refining various types of visual identities and branding elements, with a focus on simplicity and affordability."
+  },
+  {
+    name: "Type Wolf",
+    url: "https://www.typewolf.com/",
+    type: "Design",
+    description: "An online resource and community, for discovering and learning about typography and typeface design, that provides a set of articles and examples, for various types of typographic styles and trends, with a focus on education and inspiration."
+  },
+  {
+    name: "Abstract",
+    url: "https://www.abstract.com/",
+    type: "Design",
+    description: "A web-based platform and tool, for collaborating and managing design projects and teams, that provides a set of features and integrations, for creating and sharing various types of design assets and workflows, with a focus on organization and efficiency."
+  },
+  {
+    name: "Pixeltrue",
+    url: "https://www.pixeltrue.com/",
+    type: "Design",
+    description: "A collection of free and premium vector illustrations and icons, for web and graphic design, that provides a set of styles and themes, for various types of projects and industries, with a focus on quality and flexibility."
+  },
+  {
+    name: "Typeform",
+    url: "https://www.typeform.com/",
+    type: "Design",
+    description: "A web-based tool and service, for creating and managing online forms and surveys, that provides a set of features and templates, for generating and customizing various types of user interactions and feedback, with a focus on usability and engagement."
+  },
+  {
+    name: "Designmodo",
+    url: "https://designmodo.com/",
+    type: "Design",
+    description: "An online resource and community, for learning and sharing about web and graphic design, that provides a set of articles and tutorials, for various types of design topics and trends, with a focus on innovation and creativity."
+  },
+  {
+    name: "Shape Divider",
+    url: "https://www.shapedivider.app/",
+    type: "Design",
+    description: "A web-based tool and service, for generating and customizing SVG shape dividers, for web and graphic design, that provides a set of options and presets, for creating and applying various types of divider styles and patterns, with a focus on aesthetics and uniqueness."
+  },
+  {
+    name: "DesignEvo",
+    url: "https://www.designevo.com/",
+    type: "Design",
+    description: "A web-based tool and service, for creating and customizing logo designs, for various types of businesses and organizations, that provides a set of templates and features, for generating and refining various types of visual identities and branding elements, with a focus on simplicity and affordability."
+  },
+  {
+    name: "Lapa Ninja",
+    url: "https://www.lapa.ninja/",
+    type: "Design",
+    description: "An online collection of curated web designs and templates, for various types of projects and industries, that provides a set of examples and inspirations, for designing and developing various types of websites and interfaces, with a focus on aesthetics and usability."
+  },
+  {
+    name: "Neumorphism.io",
+    url: "https://neumorphism.io/",
+    type: "Design",
+    description: "A web-based tool and generator, for creating and customizing neumorphic UI designs and elements, for web and graphic design, that provides a set of options and presets, for generating and fine-tuning various types of shadows and gradients, with a focus on modernity and trendiness."
+  },
+  {
+    name: "MockFlow",
+    url: "https://mockflow.com/",
+    type: "Design",
+    description: "A web-based tool and service, for creating and sharing wireframes and prototypes, for various types of projects and industries, that provides a set of templates and features, for generating and testing various types of user experiences and interactions, with a focus on collaboration and efficiency."
+  },
+  {
+    name: "Designer News",
+    url: "https://www.designernews.co/",
+    type: "Design",
+    description: "An online community and forum, for sharing and discussing web and graphic design news and topics, that provides a set of articles and discussions, for various types of design trends and technologies, with a focus on community and learning."
+  },
+  {
+    name: "Shape.so",
+    url: "https://shape.so/",
+    type: "Design",
+    description: "A web-based tool and library, for creating and customizing vector illustrations and icons, for web and graphic design, that provides a set of elements and features, for generating and adapting various types of shapes and graphics, with a focus on simplicity and versatility."
+  },
+  {
+    name: "Illustrations",
+    url: "https://illlustrations.co/",
+    type: "Design",
+    description: "A collection of free and customizable vector illustrations and graphics, for web and graphic design, that provides a set of styles and themes, for various types of projects and industries, with a focus on diversity and inclusivity."
+  },
+  {
+    name: "InVision",
+    url: "https://www.invisionapp.com/",
+    type: "Design",
+    description: "A web-based platform and tool, for creating and sharing designs and prototypes, for various types of projects and industries, that provides a set of features and integrations, for designing and collaborating on various types of user experiences and interfaces, with a focus on innovation and automation."
+  },
+  {
+    name: "Icons8",
+    url: "https://icons8.com/",
+    type: "Design",
+    description: "A library of free and paid icons, for various types of projects and industries, that provides a set of styles and formats, for designing and customizing various types of visual elements and components, with a focus on consistency and quality."
+  },
+  {
+    name: "Undraw",
+    url: "https://undraw.co/",
+    type: "Design",
+    description: "A collection of free and customizable vector illustrations and graphics, for web and graphic design, that provides a set of styles and themes, for various types of projects and industries, with a focus on diversity and modernity."
+  },
+  {
+    name: "Muzli",
+    url: "https://muz.li/",
+    type: "Design",
+    description: "An online resource and community, for discovering and sharing web and graphic design news and topics, that provides a set of articles and examples, for various types of design trends and technologies, with a focus on innovation and inspiration."
+  },
+  {
+    name: "The Noun Project",
+    url: "https://thenounproject.com/",
+    type: "Design",
+    description: "A library of free and paid icons and symbols, for various types of projects and industries, that provides a set of styles and themes, for designing and customizing various types of visual elements and components, with a focus on clarity and simplicity."
+  },
+  {
+    name: "Mockuuups Studio",
+    url: "https://mockuuups.studio/",
+    type: "Design",
+    description: "A desktop app and tool, for creating and customizing mockups and prototypes, for various types of projects and industries, that provides a set of templates and features, for generating and testing various types of user interfaces and experiences, with a focus on efficiency and productivity."
+  },
+  {
+    name: "Design Better",
+    url: "https://www.designbetter.co/",
+    type: "Design",
+    description: "An online resource and community, for learning and sharing about design and product development, that provides a set of articles and examples, for various types of design methodologies and principles, with a focus on education and collaboration."
+  },
+  {
+    name: "Klex",
+    url: "https://klex.io/",
+    type: "Design",
+    description: "A web-based tool and service, for creating and customizing graphic designs and layouts, for various types of projects and industries, that provides a set of templates and features, for generating and refining various types of visual elements and components, with a focus on simplicity and affordability."
+  },
+  {
+    name: "Artboard Studio",
+    url: "https://artboard.studio/",
+    type: "Design",
+    description: "A web-based tool and service, for creating and customizing mockups and prototypes, for various types of projects and industries, that provides a set of templates and features, for generating and testing various types of user interfaces and experiences, with a focus on realism and creativity."
+  },
+  {
+    name: "DesignCuts",
+    url: "https://www.designcuts.com/",
+    type: "Design",
+    description: "A marketplace and community, for purchasing and downloading premium design assets and resources, for various types of projects and industries, that provides a set of bundles and deals, for saving time and money on high-quality design products."
+  },
+  {
+    name: "Descript",
+    url: "https://www.descript.com/",
+    type: "Design",
+    description: "A desktop app and tool, for creating and editing audio and video content, for various types of projects and industries, that provides a set of features and integrations, for generating and publishing various types of multimedia materials and experiences, with a focus on innovation and automation."
+  },
+  {
+    name: "Design Space",
+    url: "https://www.designspace.com/",
+    type: "Design",
+    description: "A web-based platform and tool, for creating and sharing design projects and assets, for various types of projects and industries, that provides a set of features and integrations, for generating and organizing various types of design materials and workflows, with a focus on collaboration and efficiency."
+  },
+  {
+    name: "Whimsical",
+    url: "https://whimsical.com/",
+    type: "Design",
+    description: "A web-based tool and service, for creating and sharing flowcharts and diagrams, for various types of projects and industries, that provides a set of features and integrations, for generating and visualizing various types of workflows and processes, with a focus on simplicity and clarity."
+  },
+  {
+    name: "Logojoy",
+    url: "https://logojoy.com/",
+    type: "Design",
+    description: "A web-based tool and service, for creating and customizing logo designs, for various types of businesses and organizations, that provides a set of templates and features, for generating and refining various types of visual identities and branding elements, with a focus on automation and affordability."
+  },
+  {
+    name: "Shutterstock Editor",
+    url: "https://www.shutterstock.com/editor",
+    type: "Design",
+    description: "A web-based tool and service, for creating and customizing graphic designs and layouts, for various types of projects and industries, that provides a set of templates and features, for generating and refining various types of visual elements and components, with a focus on ease-of-use and accessibility."
+  },
+  {
+    name: "LogoMakr",
+    url: "https://logomakr.com/",
+    type: "Design",
+    description: "A web-based tool and service, for creating and customizing logo designs, for various types of businesses and organizations, that provides a set of templates and features, for generating and refining various types of visual identities and branding elements, with a focus on simplicity and affordability."
+  },
+  {
+    name: "FigmaCrush",
+    url: "https://www.figmacrush.com/",
+    type: "Design",
+    description: "An online resource and community, for discovering and sharing Figma design resources and templates, for various types of projects and industries, that provides a set of examples and inspirations, for designing and developing various types of user interfaces and experiences, with a focus on efficiency and productivity."
+  },
+  {
+    name: "Pixeltrue",
+    url: "https://www.pixeltrue.com/",
+    type: "Design",
+    description: "A library of premium SVG illustrations and animations, for various types of projects and industries, that provides a set of styles and themes, for designing and customizing various types of visual elements and components, with a focus on quality and versatility."
+  },
+  {
+    name: "Interfacer",
+    url: "https://interfacer.xyz/",
+    type: "Design",
+    description: "An online collection of curated design resources and inspiration, for various types of projects and industries, that provides a set of examples and inspirations, for designing and developing various types of user interfaces and experiences, with a focus on aesthetics and functionality."
+  },
+  {
+    name: "UI Garage",
+    url: "https://uigarage.net/",
+    type: "Design",
+    description: "An online collection of curated design resources and inspiration, for various types of projects and industries, that provides a set of examples and inspirations, for designing and developing various types of user interfaces and experiences, with a focus on usability and accessibility."
+  },
+  {
+    name: "Canva Animator",
+    url: "https://www.canva.com/animator/",
+    type: "Design",
+    description: "A web-based tool and service, for creating and customizing animations and motion graphics, for various types of projects and industries, that provides a set of templates and features, for generating and refining various types of visual elements and components, with a focus on creativity and ease-of-use."
+  },
+  {
+    name: "Figma Resources",
+    url: "https://www.figmaresources.com/",
+    type: "Design",
+    description: "An online collection of curated Figma design resources and templates, for various types of projects and industries, that provides a set of examples and inspirations, for designing and developing various types of user interfaces and experiences, with a focus on efficiency and productivity."
+  },
+  {
+    name: "Remove Background",
+    url: "https://www.remove.bg/",
+    type: "Design",
+    description: "A web-based tool and service, for removing backgrounds from images and photos, for various types of projects and industries, that provides a set of features and integrations, for generating and refining various types of visual elements and components, with a focus on accuracy and speed."
+  },
+  {
+    name: "Font Flipper",
+    url: "https://fontflipper.com/",
+    type: "Design",
+    description: "A web-based tool and service, for previewing and testing various types of fonts and typefaces, for various types of projects and industries, that provides a set of options and features, for generating and comparing various types of typographic styles and combinations, with a focus on flexibility and convenience."
+  },
+  {
+    name: "Gradient Magic",
+    url: "https://www.gradientmagic.com/",
+    type: "Design",
+    description: "A web-based tool and generator, for creating and customizing various types of gradients and color schemes, for web and graphic design, that provides a set of options and presets, for generating and fine-tuning various types of color palettes and styles, with a focus on creativity and inspiration."
+  },
+  {
+    name: "Solved by Flexbox",
+    url: "https://philipwalton.github.io/solved-by-flexbox/",
+    type: "CSS",
+    description: "A collection of common layout patterns and solutions, built using CSS flexbox, that provides a set of examples and code snippets, for solving various types of layout problems and challenges, with a focus on simplicity and compatibility."
+  },
+  {
+    name: "WickedCSS",
+    url: "https://wickedcss.com/",
+    type: "CSS",
+    description: "A set of CSS animations and transitions, for adding visual effects and interactivity to web pages and applications, that provides a set of pre-built animations and classes, for generating and customizing various types of motion and behavior, with a focus on creativity and ease-of-use."
+  },
+  {
+    name: "CSSfx",
+    url: "https://cssfx.netlify.app/",
+    type: "CSS",
+    description: "A collection of CSS effects and animations, for adding visual flair and personality to web pages and applications, that provides a set of pre-built effects and code snippets, for generating and customizing various types of styles and transitions, with a focus on simplicity and compatibility."
+  },
+  {
+    name: "Tufte CSS",
+    url: "https://edwardtufte.github.io/tufte-css/",
+    type: "CSS",
+    description: "A CSS framework and style guide, for creating and styling web pages and documents, that provides a set of templates and styles, for generating and customizing various types of content and layouts, with a focus on clarity and readability."
+  },
+  {
+    name: "Mimic",
+    url: "https://github.com/codrops/MimicCSS",
+    type: "CSS",
+    description: "A collection of CSS styles and animations, inspired by various types of user interfaces and experiences, that provides a set of examples and code snippets, for generating and customizing various types of visual elements and components, with a focus on creativity and innovation."
+  },
+  {
+    name: "W3C CSS Validation Service",
+    url: "https://jigsaw.w3.org/css-validator/",
+    type: "CSS",
+    description: "A web-based tool and service, for validating and checking CSS code and syntax, for various types of web pages and applications, that provides a set of options and features, for analyzing and optimizing various types of CSS styles and layouts, with a focus on standards and best practices."
+  },
+  {
+    name: "Magic Animations",
+    url: "https://www.minimamente.com/project/magic/",
+    type: "CSS",
+    description: "A collection of CSS animations and transitions, for adding visual effects and interactivity to web pages and applications, that provides a set of pre-built animations and code snippets, for generating and customizing various types of motion and behavior, with a focus on creativity and inspiration."
+  },
+  {
+    name: "CSS Doodle",
+    url: "https://css-doodle.com/",
+    type: "CSS",
+    description: "A web-based tool and generator, for creating and customizing various types of geometric and abstract patterns, using CSS syntax and expressions, that provides a set of options and features, for generating and fine-tuning various types of visual elements and components, with a focus on creativity and experimentation."
+  },
+  {
+    name: "CSS Grid Generator",
+    url: "https://cssgrid-generator.netlify.app/",
+    type: "CSS",
+    description: "A web-based tool and generator, for creating and customizing CSS grid layouts, for various types of web pages and applications, that provides a set of options and features, for generating and fine-tuning various types of grid-based designs and structures, with a focus on flexibility and efficiency."
+  },
+  {
+    name: "Hover.css",
+    url: "https://ianlunn.github.io/Hover/",
+    type: "CSS",
+    description: "A collection of CSS3 transitions and animations, for creating hover effects and interactivity on web pages and applications, that provides a set of pre-built animations and code snippets, for generating and customizing various types of hover styles and behaviors, with a focus on creativity and compatibility."
+  },
+  {
+    name: "Basscss",
+    url: "https://basscss.com/",
+    type: "CSS",
+    description: "A lightweight and modular CSS framework, for creating and styling web pages and applications, that provides a set of styles and utilities, for generating and customizing various types of layout and typography, with a focus on simplicity and performance."
+  },
+  {
+    name: "CSSgram",
+    url: "https://una.im/CSSgram/",
+    type: "CSS",
+    description: "A collection of CSS filters and effects, inspired by popular Instagram filters, for adding visual effects and styles to web pages and applications, that provides a set of pre-built filters and code snippets, for generating and customizing various types of image styles and enhancements, with a focus on creativity and inspiration."
+  },
+  {
+    name: "Animate.css",
+    url: "https://animate.style/",
+    type: "CSS",
+    description: "A collection of CSS3 animations and transitions, for adding motion and interactivity to web pages and applications, that provides a set of pre-built animations and classes, for generating and customizing various types of motion and behavior, with a focus on simplicity and compatibility."
+  },
+  {
+    name: "CSS Stats",
+    url: "https://cssstats.com/",
+    type: "CSS",
+    description: "A web-based tool and service, for analyzing and visualizing CSS code and metrics, for various types of web pages and applications, that provides a set of options and features, for measuring and optimizing various types of CSS styles and layouts, with a focus on data and insights."
+  },
+  {
+    name: "Animate Plus",
+    url: "https://github.com/bendc/animateplus",
+    type: "CSS",
+    description: "A lightweight and customizable JavaScript animation library, for creating and managing complex animations and transitions, that provides a set of options and functions, for generating and fine-tuning various types of motion and behavior, with a focus on performance and ease-of-use."
+  },
+  {
+    name: "CSS Deck",
+    url: "https://cssdeck.com/",
+    type: "CSS",
+    description: "An online collection of curated CSS resources and examples, for various types of web pages and applications, that provides a set of templates and styles, for generating and customizing various types of layout and typography, with a focus on inspiration and learning."
+  },
+  {
+    name: "CSS Border Radius Generator",
+    url: "https://border-radius.com/",
+    type: "CSS",
+    description: "A web-based tool and generator, for creating and customizing CSS border radius styles, for various types of web pages and applications, that provides a set of options and features, for generating and fine-tuning various types of border styles and shapes, with a focus on efficiency and compatibility."
+  },
+  {
+    name: "Cirrus CSS",
+    url: "https://spiderpig86.github.io/Cirrus/",
+    type: "CSS",
+    description: "A lightweight and modular CSS framework, for creating and styling web pages and applications, that provides a set of styles and utilities, for generating and customizing various types of layout and typography, with a focus on simplicity and clarity."
+  },
+  {
+    name: "CSS Layout",
+    url: "https://csslayout.io/",
+    type: "CSS",
+    description: "A collection of CSS layout patterns and solutions, for creating and styling web pages and applications, that provides a set of examples and code snippets, for generating and customizing various types of layout and structure, with a focus on simplicity and flexibility."
+  },
+  {
+    name: "CSSgram.js",
+    url: "https://sarcadass.github.io/cssgram/",
+    type: "CSS",
+    description: "A JavaScript library and plugin, for applying CSSgram filters and effects to images and videos, for various types of web pages and applications, that provides a set of options and functions, for generating and customizing various types of image styles and enhancements, with a focus on creativity and interactivity."
+  },
+  {
+    name: "SassMeister",
+    url: "https://www.sassmeister.com/",
+    type: "CSS",
+    description: "An online Sass playground and compiler, for testing and debugging Sass code and syntax, for various types of web pages and applications, that provides a set of options and features, for analyzing and optimizing various types of Sass styles and layouts, with a focus on productivity and convenience."
+  },
+  {
+    name: "CSS Reference",
+    url: "https://cssreference.io/",
+    type: "CSS",
+    description: "An online CSS reference and guide, for learning and exploring CSS code and syntax, for various types of web pages and applications, that provides a set of examples and explanations, for understanding and applying various types of CSS styles and properties, with a focus on clarity and completeness."
+  },
+  {
+    name: "CSSCO",
+    url: "https://webkul.github.io/cssco/",
+    type: "CSS",
+    description: "A collection of CSS filters and effects, inspired by popular photo filters and styles, for adding visual effects and styles to web pages and applications, that provides a set of pre-built filters and code snippets, for generating and customizing various types of image styles and enhancements, with a focus on creativity and inspiration."
+  },
+  {
+    name: "CSS Gridish",
+    url: "https://github.com/IBM/css-gridish",
+    type: "CSS",
+    description: "A CSS grid framework and generator, for creating and customizing CSS grid layouts, that provides a set of templates and tools, for generating and fine-tuning various types of responsive grid-based designs and structures, with a focus on efficiency and accessibility."
+  },
+  {
+    name: "CSS Carbon",
+    url: "https://www.carbondesignsystem.com/guidelines/css",
+    type: "CSS",
+    description: "A CSS framework and system, for creating and styling web pages and applications, that provides a set of styles and guidelines, for generating and customizing various types of design and layout, with a focus on consistency and usability."
+  },
+  {
+    name: "CSS Accordion",
+    url: "https://codepen.io/richardscarrott/pen/MWKgGrP",
+    type: "CSS",
+    description: "A CSS-only accordion module, for creating and managing interactive and collapsible content sections, that provides a set of styles and classes, for generating and customizing various types of accordion styles and behaviors, with a focus on simplicity and performance."
+  },
+  {
+    name: "CSS Paint API",
+    url: "https://developer.mozilla.org/en-US/docs/Web/API/CSS_Painting_API",
+    type: "CSS",
+    description: "A web API and technology, for creating and manipulating CSS styles and graphics, that provides a set of properties and methods, for generating and customizing various types of visual effects and styles, with a focus on creativity and flexibility."
+  },
+  {
+    name: "CSS Font Synth",
+    url: "https://zoltantothcom.github.io/css-font-synth/",
+    type: "CSS",
+    description: "A web-based tool and generator, for creating and customizing CSS font styles, for various types of web pages and applications, that provides a set of options and features, for generating and fine-tuning various types of font-based designs and structures, with a focus on creativity and experimentation."
+  },
+  {
+    name: "CSSWand",
+    url: "https://csswand.dev/",
+    type: "CSS",
+    description: "A collection of CSS code snippets and utilities, for creating and styling web pages and applications, that provides a set of examples and resources, for generating and customizing various types of layout and design, with a focus on simplicity and convenience."
+  },
+  {
+    name: "CSS3 Patterns Gallery",
+    url: "https://leaverou.github.io/css3patterns/",
+    type: "CSS",
+    description: "A collection of CSS patterns and designs, for creating and styling web pages and applications, that provides a set of pre-built patterns and code snippets, for generating and customizing various types of background and texture, with a focus on creativity and diversity."
+  },
+  {
+    name: "CSS Janus",
+    url: "https://cssjanus.github.io/",
+    type: "CSS",
+    description: "A web-based tool and service, for converting and transforming CSS styles and properties, between left-to-right and right-to-left writing modes, that provides a set of options and features, for generating and fine-tuning various types of bi-directional styles and layouts, with a focus on accessibility and compatibility."
+  },
+  {
+    name: "CSS Remedy",
+    url: "https://github.com/mozdevs/cssremedy",
+    type: "CSS",
+    description: "A collection of CSS code snippets and utilities, for fixing and correcting common CSS problems and issues, that provides a set of examples and solutions, for generating and customizing various types of layout and design, with a focus on simplicity and compatibility."
+  },
+  {
+    name: "CSS Zoom",
+    url: "https://css-tricks.com/a-closer-look-at-css-logical-properties-and-values/#css-zoom",
+    type: "CSS",
+    description: "A CSS property and value, for scaling and zooming elements and content, that provides a set of options and functions, for generating and customizing various types of zooming and magnifying effects, with a focus on accessibility and usability."
+  },
+  {
+    name: "CSS Modules",
+    url: "https://github.com/css-modules/css-modules",
+    type: "CSS",
+    description: "A modular and scalable CSS architecture and methodology, for creating and managing complex and dynamic CSS styles and layouts, that provides a set of guidelines and tools, for generating and organizing various types of module and component-based designs and structures, with a focus on maintainability and reusability."
+  },
+  {
+    name: "CSS Bezier Curve Editor",
+    url: "https://www.jasondavies.com/animated-bezier/",
+    type: "CSS",
+    description: "A web-based tool and editor, for creating and customizing CSS Bezier curves and animations, for various types of web pages and applications, that provides a set of options and features, for generating and fine-tuning various types of motion and transition effects, with a focus on interactivity and creativity."
+  },
+  {
+    name: "CSS Filters Playground",
+    url: "https://codepen.io/sosuke/pen/Pjoqqp",
+    type: "CSS",
+    description: "A web-based tool and playground, for experimenting and testing CSS filter and effect styles, for various types of web pages and applications, that provides a set of examples and code snippets, for generating and customizing various types of image styles and enhancements, with a focus on inspiration and exploration."
+  },
+  {
+    name: "CSS Depth",
+    url: "https://jonathantneal.github.io/css-depth/",
+    type: "CSS",
+    description: "A CSS property and value, for creating and styling layered and depth-based content and layouts, that provides a set of options and functions, for generating and customizing various types of depth and perspective effects, with a focus on creativity and expressiveness."
+  },
+  {
+    name: "CSS Day-Night Toggle",
+    url: "https://codepen.io/ettrics/pen/LjYGaz",
+    type: "CSS",
+    description: "A CSS-only toggle switch, for switching and toggling between day and night modes, that provides a set of styles and classes, for generating and customizing various types of toggle and switch styles and behaviors, with a focus on simplicity and accessibility."
+  },
+  {
+    name: "CSS Animista",
+    url: "https://animista.net/",
+    type: "CSS",
+    description: "A collection of CSS animations and transitions, for adding motion and interactivity to web pages and applications, that provides a set of pre-built animations and classes, for generating and customizing various types of motion and behavior, with a focus on creativity and inspiration."
+  },
+  {
+    name: "CSS Only 3D Labyrinth",
+    url: "https://codepen.io/GeoffreyCrofte/pen/BXgEEq",
+    type: "CSS",
+    description: "A CSS-only 3D labyrinth game, for creating and playing a 3D maze game, that provides a set of styles and classes, for generating and customizing various types of labyrinth styles and behaviors, with a focus on interactivity and entertainment."
+  },
+  {
+    name: "CSS Sticky Elements",
+    url: "https://www.iamrohit.in/sticky-elements-using-css/",
+    type: "CSS",
+    description: "A CSS property and value, for creating and styling sticky and fixed-position elements, that provides a set of options and functions, for generating and customizing various types of sticky and fixed-position effects, with a focus on usability and convenience."
+  },
+  {
+    name: "CSS Flat Design Buttons",
+    url: "https://codepen.io/michalsnik/pen/KpzEuk",
+    type: "CSS",
+    description: "A collection of CSS flat design buttons and styles, for creating and styling flat design buttons and interfaces, that provides a set of pre-built buttons and styles, for generating and customizing various types of flat design buttons and components, with a focus on simplicity and aesthetics."
+  },
+  {
+    name: "CSS Truncation with Ellipsis",
+    url: "https://css-tricks.com/snippets/css/truncate-string-with-ellipsis/",
+    type: "CSS",
+    description: "A CSS property and value, for truncating and shortening text content with an ellipsis, that provides a set of options and functions, for generating and customizing various types of text truncation and display, with a focus on readability and space-saving."
+  },
+  {
+    name: "CSS Rhythm Builder",
+    url: "https://rhythm.nikolaydyankov.com/",
+    type: "CSS",
+    description: "A web-based tool and generator, for creating and customizing CSS rhythm and vertical spacing, for various types of web pages and applications, that provides a set of options and features, for generating and fine-tuning various types of rhythm and spacing patterns, with a focus on consistency and harmony."
+  },
+  {
+    name: "CSS Perspective Hover Effects",
+    url: "https://tympanus.net/Development/PerspectiveHover/",
+    type: "CSS",
+    description: "A collection of CSS hover effects and transitions, for creating and styling interactive and dynamic elements, that provides a set of pre-built effects and classes, for generating and customizing various types of perspective and 3D effects, with a focus on creativity and inspiration."
+  },
+  {
+    name: "CSS Scrollbar Styling",
+    url: "https://css-tricks.com/custom-scrollbars-in-webkit/",
+    type: "CSS",
+    description: "A CSS property and value, for styling and customizing web scrollbars, that provides a set of options and functions, for generating and customizing various types of scrollbar styles and behaviors, with a focus on aesthetics and usability."
+  },
+  {
+    name: "CSS Marble",
+    url: "https://cssmarble.com/",
+    type: "CSS",
+    description: "A collection of CSS code snippets and utilities, for creating and styling web pages and applications, that provides a set of examples and resources, for generating and customizing various types of layout and design, with a focus on simplicity and convenience."
+  },
+  {
+    name: "Visual Rhetoric",
+    url: "https://www.aiga.org/what-is-visual-rhetoric",
+    type: "Design",
+    description: "A design concept and methodology, for creating and communicating persuasive and effective messages, that provides a set of guidelines and principles, for analyzing and applying various types of visual elements and techniques, with a focus on impact and meaning."
+  },
+  {
+    name: "Design Better",
+    url: "https://www.designbetter.co/",
+    type: "Design",
+    description: "A collection of design resources and insights, for improving and advancing design skills and knowledge, that provides a set of articles, podcasts, books, and workshops, for learning and exploring various types of design topics and practices, with a focus on education and growth."
+  },
+  {
+    name: "Dieter Rams' Ten Principles of Good Design",
+    url: "https://www.vitsoe.com/us/about/good-design",
+    type: "Design",
+    description: "A set of design principles and guidelines, for creating and evaluating good design, that provides a set of ten principles and examples, for assessing and applying various types of design elements and strategies, with a focus on simplicity and functionality."
+  },
+  {
+    name: "Design Principles FTW",
+    url: "https://principles.design/",
+    type: "Design",
+    description: "A collection of design principles and examples, for improving and refining design skills and knowledge, that provides a set of principles and case studies, for analyzing and applying various types of design elements and practices, with a focus on accessibility and inclusivity."
+  },
+  {
+    name: "Creative Block",
+    url: "https://www.creativeblock.com/",
+    type: "Design",
+    description: "A web-based tool and generator, for overcoming and inspiring creative block, for various types of creative projects and endeavors, that provides a set of prompts and exercises, for generating and exploring various types of creative ideas and solutions, with a focus on inspiration and motivation."
+  },
+  {
+    name: "Figma Design System",
+    url: "https://www.figma.com/design-systems/",
+    type: "Design",
+    description: "A collection of design systems and resources, for creating and managing scalable and consistent design elements and systems, that provides a set of pre-built systems and templates, for generating and customizing various types of design systems and elements, with a focus on efficiency and collaboration."
+  },
+  {
+    name: "Design Fundamentals",
+    url: "https://www.canva.com/learn/design-fundamentals/",
+    type: "Design",
+    description: "A set of design fundamentals and principles, for creating and evaluating effective and engaging designs, that provides a set of tutorials and examples, for learning and applying various types of design concepts and techniques, with a focus on accessibility and usability."
+  },
+  {
+    name: "Color Hunt",
+    url: "https://colorhunt.co/",
+    type: "Design",
+    description: "A collection of color palettes and schemes, for creating and exploring various types of color combinations and themes, that provides a set of pre-built palettes and categories, for generating and customizing various types of color schemes and themes, with a focus on aesthetics and inspiration."
+  },
+  {
+    name: "HTMX",
+    url: "https://htmx.org/",
+    type: "HTML",
+    description: "A web-based tool and library, for building and creating dynamic and interactive web pages, that provides a set of attributes and classes, for generating and customizing various types of web components and behaviors, with a focus on simplicity and accessibility."
+  },
+  {
+    name: "Heroicons",
+    url: "https://heroicons.com/",
+    type: "HTML",
+    description: "A collection of SVG icons and illustrations, for creating and designing various types of web pages and applications, that provides a set of pre-built icons and categories, for generating and customizing various types of icons and illustrations, with a focus on simplicity and versatility."
+  },
+  {
+    name: "Hybrids",
+    url: "https://github.com/hybridsjs/hybrids",
+    type: "HTML",
+    description: "A web-based tool and library, for creating and defining custom web components and behaviors, that provides a set of functions and features, for generating and customizing various types of web components and behaviors, with a focus on modularity and flexibility."
+  },
+  {
+    name: "Slip.js",
+    url: "https://github.com/pornel/slip",
+    type: "HTML",
+    description: "A web-based tool and library, for creating and implementing mobile touch gestures and behaviors, that provides a set of functions and classes, for generating and customizing various types of touch behaviors and interactions, with a focus on responsiveness and usability."
+  },
+  {
+    name: "Fitty",
+    url: "https://rikschennink.github.io/fitty/",
+    type: "HTML",
+    description: "A web-based tool and library, for fitting and resizing text content to its parent container, that provides a set of options and features, for generating and customizing various types of text behavior and display, with a focus on responsiveness and readability."
+  },
+  {
+    name: "HTMLDOM",
+    url: "https://htmldom.dev/",
+    type: "HTML",
+    description: "A web-based tool and library, for parsing and manipulating HTML code and elements, that provides a set of functions and methods, for generating and customizing various types of HTML elements and structures, with a focus on automation and convenience."
+  },
+  {
+    name: "HTML5 Sortable",
+    url: "https://github.com/lukasoppermann/html5sortable",
+    type: "HTML",
+    description: "A web-based tool and library, for creating and implementing sortable and draggable HTML elements, that provides a set of options and features, for generating and customizing various types of drag and drop behaviors and interactions, with a focus on flexibility and accessibility."
+  },
+  {
+    name: "Vivid.js",
+    url: "https://webkul.github.io/vivid/",
+    type: "HTML",
+    description: "A collection of SVG illustrations and animations, for creating and designing various types of web pages and applications, that provides a set of pre-built illustrations and styles, for generating and customizing various types of animations and visual effects, with a focus on creativity and aesthetics."
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+]
+
+
+
+
+ db.resources.insertMany(resources)

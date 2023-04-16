@@ -21,6 +21,10 @@
     transition: background-color 0.3s, color 0.3s;
 }
 
+.filter-buttons button.active {
+    background-color: white;
+    color: #000C24;
+}
 .filter-buttons button:hover {
     background-color: white;
     color: #000C24;
