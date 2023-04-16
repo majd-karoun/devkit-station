@@ -2,22 +2,24 @@ import "./header.css";
 import React, { useState } from "react";
 import axios from "axios";
 
-const Header = ({ setLinks }) => {
+const Header = ({ setLinks, setUpdateKey }) => {
   const [filter, setFilter] = useState("All");
 
   const handleFilter = (e) => {
+    setUpdateKey((prevKey) => prevKey + 1);
+    setFilter(e.target.innerText);
     if (e.target.innerText != "All") {
-      setFilter(e.target.innerText);
       axios
         .get(`http://localhost:5000/resources/type/${e.target.innerText}`)
         .then((Response) => {
           setLinks(Response.data);
         });
-    }else{
-        const response = axios.get('http://localhost:5000/resources').then((response) => {
-
-            setLinks(response.data);
-        })
+    } else {
+      const response = axios
+        .get("http://localhost:5000/resources")
+        .then((response) => {
+          setLinks(response.data);
+        });
     }
   };
 
@@ -31,7 +33,7 @@ const Header = ({ setLinks }) => {
           All
         </button>
         <button
-          className={filter === "Tools " ? "active btn-tools" : "btn-tools"}
+          className={filter === "Tools" ? "active btn-tools" : "btn-tools"}
           onClick={handleFilter}>
           Tools
         </button>
@@ -41,12 +43,12 @@ const Header = ({ setLinks }) => {
           Design
         </button>
         <button
-          className={filter === "Javascript" ? "active btn-js" : "btn-js"}
+          className={filter === "JavaScript" ? "active btn-js" : "btn-js"}
           onClick={handleFilter}>
           JavaScript
         </button>
         <button
-          className={filter === "CSS" ? "active" : "btn-css"}
+          className={filter === "CSS" ? "active btn-css" : "btn-css"}
           onClick={handleFilter}>
           CSS
         </button>
@@ -55,6 +57,7 @@ const Header = ({ setLinks }) => {
           onClick={handleFilter}>
           HTML
         </button>
+      
       </nav>
     </header>
   );

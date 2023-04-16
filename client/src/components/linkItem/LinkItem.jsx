@@ -10,7 +10,7 @@ const LinkItem = ({ link }) => {
       </div>
 
       <a href={link.url} target="_blank" rel="noreferrer">
-        try
+        Try
       </a>
     </li>
   );

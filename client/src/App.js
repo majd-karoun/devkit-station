@@ -7,6 +7,7 @@ import LinksList from "./components/links-list/LinksList";
 
 function App() {
   const [links, setLinks] = useState([]);
+  const [updateKey, setUpdateKey] = useState(0);
 
   useEffect(() => {
     async function getResources() {
@@ -19,8 +20,8 @@ function App() {
 
   return (
     <div className="App">
-      <Header links={links} setLinks={setLinks}/>
-      <LinksList links={links}/>
+      <Header links={links} setLinks={setLinks}  setUpdateKey={setUpdateKey}/>
+      <LinksList links={links} updateKey={updateKey}/>
     </div>
   );
 }
