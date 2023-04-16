@@ -1,7 +1,8 @@
 .links-list-container {
     background-color: #0f2543;
     border-radius: 30px;
-    width: 90%;
+    width: 70%;
+
     margin: 0 auto;
     padding: 30px;
    
@@ -10,5 +11,14 @@
   .links-list {
     list-style: none;
     padding: 0;
+    width: 100%;
+  }
+  
+
+  @media screen and (max-width: 868px) {
+    .links-list-container {
+      width: 90%;
+      
+    }
   }
   

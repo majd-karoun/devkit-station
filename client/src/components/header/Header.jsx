@@ -25,7 +25,13 @@ const Header = ({ setLinks, setUpdateKey }) => {
 
   return (
     <header>
-      <h1 className="logo">DevLinks Station</h1>
+      <div className="logo">
+        <h1>D</h1>ev
+        <h1>L</h1>ink
+       
+        <h1>S</h1>tation
+      </div>
+     
       <nav className="filter-buttons">
         <button
           className={filter === "All" ? "active btn-all" : "btn-all"}

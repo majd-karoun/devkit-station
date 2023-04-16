@@ -59,3 +59,11 @@
     color: #000C24;
     font-weight: 800;
 }
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+
