@@ -10,13 +10,13 @@ const Header = ({ setLinks, setUpdateKey }) => {
     setFilter(e.target.innerText);
     if (e.target.innerText != "All") {
       axios
-        .get(`https://devkitstation.web.app/resources/type/${e.target.innerText}`)
+        .get(`http://localhost:5000/resources/type/${e.target.innerText}`)
         .then((Response) => {
           setLinks(Response.data);
         });
     } else {
       const response = axios
-        .get("https://devkitstation.web.app/resources")
+        .get("http://localhost:5000/resources")
         .then((response) => {
           setLinks(response.data);
         });
