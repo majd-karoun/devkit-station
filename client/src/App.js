@@ -11,7 +11,7 @@ function App() {
 
   useEffect(() => {
     async function getResources() {
-      const response = await axios.get('http://localhost:5000/resources');
+      const response = await axios.get('https://devkitstation.web.app/resources');
       setLinks(response.data);
     }
 
