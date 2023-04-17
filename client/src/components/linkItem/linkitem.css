@@ -1,3 +1,14 @@
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+  
   .link-item {
     display: flex;
     align-items: center;
@@ -7,6 +18,7 @@
     padding: 20px;
     background: #e0e5ec;
     box-shadow: inset 10px 10px 30px #c5ced6, inset -10px -10px 30px #f6fbff;
+    animation: fade-in 0.5s ease-in-out forwards;
   }
   
   .link-item__info {
