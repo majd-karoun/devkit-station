@@ -53,3 +53,18 @@
     color: #fff;
   }
   
+  @media (max-width: 768px) {
+    .link-item {
+      flex-direction: column;
+    }
+  
+    .link-item__info {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  
+    a {
+      width: 100%;
+      text-align: center;
+    }
+  }
