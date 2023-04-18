@@ -12,3 +12,18 @@ body {
   background-color: #000C24;
 }
 
+.spinner {
+  border: 8px solid rgba(5, 12, 68, 0.1);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

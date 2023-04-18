@@ -8,20 +8,27 @@ import LinksList from "./components/links-list/LinksList";
 function App() {
   const [links, setLinks] = useState([]);
   const [updateKey, setUpdateKey] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     async function getResources() {
-      const response = await axios.get('https://devkitstation.onrender.com/resources');
-      setLinks(response.data);
+      setIsLoading(true);
+      try {
+        const response = await axios.get('https://devkitstation.onrender.com/resources');
+        setLinks(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+      setIsLoading(false);
     }
-
     getResources();
   }, []);
 
   return (
     <div className="App">
       <Header links={links} setLinks={setLinks}  setUpdateKey={setUpdateKey}/>
-      <LinksList links={links} updateKey={updateKey}/>
+      <LinksList links={links} updateKey={updateKey} isLoading={isLoading}/>
+      
     </div>
   );
 }
