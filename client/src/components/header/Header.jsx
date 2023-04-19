@@ -27,7 +27,7 @@ const Header = ({ setLinks, setUpdateKey }) => {
     <header>
       <div className="logo">
         <h1>D</h1>ev
-        <h1>L</h1>ink
+        <h1>K</h1>it
        
         <h1>S</h1>tation
       </div>
