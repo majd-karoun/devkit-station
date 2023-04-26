@@ -4,8 +4,12 @@ const cors = require("cors");
 const resourcesRouter = require('./routes/resources');
 require("dotenv").config();
 
+const corsOptions = {
+  origin: 'https://devkitstation.netlify.com'
+};
+
 const app = express();
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 
 
