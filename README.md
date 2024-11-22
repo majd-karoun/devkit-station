@@ -85,5 +85,3 @@ This is a self-maintained project, but if you'd like to suggest a tool or report
 5. Open a Pull Request
 
 
-
-Built with ❤️ for the web development community
