@@ -34,6 +34,7 @@ DevKit Station is a self-maintained database of carefully selected web developme
 
 ### Deployment
 - **Frontend**: Hosted on Netlify
+- **Backend**: Hosted on Render.com
 - **Database**: MongoDB Atlas (Cloud database)
 
 ## 🚀 Getting Started
